@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AV Rentals - Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#0A2540',
+              'primary-accent': '#FF7A00',
+              'background-light': '#F6F9FC',
+              'background-dark': '#101922',
+              'text-light': '#425466',
+              'text-dark': '#cbd5e1',
+              'heading-light': '#0A2540',
+              'heading-dark': '#ffffff'
+            },
+            fontFamily: {
+              display: ['Inter', 'sans-serif']
+            },
+            borderRadius: {
+              DEFAULT: '0.25rem',
+              lg: '0.5rem',
+              xl: '0.75rem',
+              full: '9999px'
+            }
+          }
+        }
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-background-light/80 backdrop-blur-sm dark:border-slate-800/80 dark:bg-background-dark/80">
+<div class="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-4 py-4 text-heading-light dark:text-heading-dark">
+<div class="size-6 text-primary dark:text-primary-accent">
+<svg fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-12h2v4h-2zm0 6h2v2h-2z"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold">AV Rentals</h2>
+</div>
+<nav class="hidden items-center gap-8 md:flex">
+<a class="text-sm font-medium text-text-light hover:text-primary dark:text-text-dark dark:hover:text-primary-accent" href="#">Home</a>
+<a class="text-sm font-medium text-text-light hover:text-primary dark:text-text-dark dark:hover:text-primary-accent" href="#">Equipment</a>
+<a class="text-sm font-bold text-primary dark:text-primary-accent" href="#">Services</a>
+<a class="text-sm font-medium text-text-light hover:text-primary dark:text-text-dark dark:hover:text-primary-accent" href="#">Gallery</a>
+<a class="text-sm font-medium text-text-light hover:text-primary dark:text-text-dark dark:hover:text-primary-accent" href="#">Contact Us</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex h-10 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-4 text-sm font-bold text-white transition-colors hover:bg-primary-accent">
+<span class="truncate">Get a Quote</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- HeroSection -->
+<section class="relative">
+<div class="absolute inset-0 bg-slate-900/50"></div>
+<div class="relative mx-auto max-w-7xl px-4 py-24 text-center sm:px-6 sm:py-32 lg:px-8 lg:py-40">
+<h1 class="text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">Comprehensive A/V Solutions, Beyond the Rental</h1>
+<p class="mx-auto mt-6 max-w-2xl text-lg text-slate-200">We are committed to providing full-service support to ensure your event is a stunning success from start to finish.</p>
+</div>
+<div class="absolute inset-0 -z-10 h-full w-full bg-cover bg-center" data-alt="A polished event setup with professional lighting and audio equipment" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA5GbUZPr5zzfJTYNNf87keEWe7_DLKd6q-gabwAkQNlW4UvL773Tb44pCLdOHF3CaISZnJ9yAiVkHe8htoyUA8cwC554f7rWSvugRFOftIst19jzjpLdGWuE55OgHXcQOwx4CgXEtBqBGcOJAvJfU5QZTTLemAc6kWoU2FCkWZbdr2LNNUf6QZMUFNVMHZ18jd9mzkT1ZK2-if05WHRs9e2eUjWehFZ0YdR9ZrRad2Do9PS4tDdcEwUVwx4jKfg2hJiW10lh_b6Ix-');"></div>
+</section>
+<!-- Services Section -->
+<section class="py-16 sm:py-24 lg:py-32">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="space-y-16 lg:space-y-24">
+<!-- Service 1: Event Production -->
+<div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+<div class="order-2 lg:order-1">
+<div class="flex items-center gap-4">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary-accent/10 dark:text-primary-accent">
+<span class="material-symbols-outlined">tune</span>
+</div>
+<h2 class="text-3xl font-bold tracking-tight text-heading-light dark:text-heading-dark">Event Production</h2>
+</div>
+<p class="mt-4 text-lg text-text-light dark:text-text-dark">Full-scale event management, from initial planning and creative design to flawless execution. We handle all the technical details so you can focus on your audience.</p>
+</div>
+<div class="order-1 lg:order-2">
+<img class="aspect-video w-full rounded-xl object-cover shadow-lg" data-alt="A technician at a large mixing desk during a live concert." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfOxy5VLcKyr0deF3VJdH_Wg_09M150nZKWKP5AuehGEjoNk3FOBIR882j-GnZ8_C0YirHVhfbzZtlfJdKk3mSJ8yzwtCVVLJIIkVIY-c3gtkU_FUAfnjrOFmFnBzJ2m9sKxUhxqaqL9EByW4ojyuKtdSTZEK8RicTQ6WpRLSpbwtAUMuhpDQCNPGR_W81UxgpR8x7-Ccwr6uBj2O5J92n6LwdvNEHH1bvmaAFkxPfAvmwCxvaARbgNHPr8C--Ofz5TYfXDMQ-gpki"/>
+</div>
+</div>
+<!-- Service 2: Delivery & Setup -->
+<div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+<div>
+<img class="aspect-video w-full rounded-xl object-cover shadow-lg" data-alt="Technicians carefully setting up large speakers for an event." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxeZdzu7oBpPq3TVR0FAT2D6ZVwXfqpJ59S-WapvyPWJsDNpI0vLfw_V_6vmT5jnYpg_VyoK67_kuJ0hRB6wBRWF18FDI0fky8uLyCLVoKMP3uKbGdAre-DTn0UsXqkGVthI4mdQJKbgEh9nn5YbDSet7p63_mdAqo8t3hc_zrzLhuOgZgUliOEIzwpTcOFlrrv3zJeCOdINH9tmk-iGJAHxxylImIR2eIcTyAF0IqmFgx6AH2jjX2u2a7rENHBauxnvLYAvlnAghg"/>
+</div>
+<div>
+<div class="flex items-center gap-4">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary-accent/10 dark:text-primary-accent">
+<span class="material-symbols-outlined">local_shipping</span>
+</div>
+<h2 class="text-3xl font-bold tracking-tight text-heading-light dark:text-heading-dark">Delivery &amp; Setup</h2>
+</div>
+<p class="mt-4 text-lg text-text-light dark:text-text-dark">Reliable, on-time delivery and professional installation of all audio-visual equipment. Our team ensures everything is perfectly configured for your venue.</p>
+</div>
+</div>
+<!-- Service 3: On-site Technical Support -->
+<div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+<div class="order-2 lg:order-1">
+<div class="flex items-center gap-4">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary-accent/10 dark:text-primary-accent">
+<span class="material-symbols-outlined">support_agent</span>
+</div>
+<h2 class="text-3xl font-bold tracking-tight text-heading-light dark:text-heading-dark">On-site Technical Support</h2>
+</div>
+<p class="mt-4 text-lg text-text-light dark:text-text-dark">Expert technicians available on-site to manage the A/V throughout your event, providing immediate assistance and ensuring a seamless experience for you and your guests.</p>
+</div>
+<div class="order-1 lg:order-2">
+<img class="aspect-video w-full rounded-xl object-cover shadow-lg" data-alt="A friendly technician assisting a client during an event." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_pqt0j-EuuLPP3cw-AJFgAWL6OER7z03Cwy4P3UJqA7y7QPULT_c3MBG3mXn64r6KaGlaiG5_OyPv8NqA3ujtbUP4fv8Fxxh8FunJGjJRlV6Q64gk_iTv8BJASTexSwCQZWb5dWwaPOxAYqNFfyTL0uWRQBul6LuNvf0wg1m3JWU4WdUIuA6AAP84n7yObLVBouXPJuvZSxMA_xYGN3Ce1wnz8CzabH3rci0x54IpxeC_ITG1S8GFN_mZvZCQyn5rJOJWbyYAYmGt"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTASection -->
+<section class="bg-slate-100 dark:bg-slate-900/50 py-16 sm:py-24">
+<div class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold tracking-tight text-heading-light dark:text-heading-dark sm:text-4xl">Ready to Plan Your Perfect Event?</h2>
+<p class="mx-auto mt-4 max-w-2xl text-lg text-text-light dark:text-text-dark">Let our experts help you craft an unforgettable experience. Contact us today for a free consultation and quote.</p>
+<div class="mt-8 flex justify-center">
+<button class="flex h-12 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-5 text-base font-bold text-white transition-colors hover:bg-primary-accent">
+<span class="truncate">Request a Consultation</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background-light dark:bg-background-dark">
+<div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+<div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+<div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+<a class="text-sm text-text-light hover:text-primary dark:text-text-dark dark:hover:text-primary-accent" href="#">Privacy Policy</a>
+<a class="text-sm text-text-light hover:text-primary dark:text-text-dark dark:hover:text-primary-accent" href="#">Terms of Service</a>
+<a class="text-sm text-text-light hover:text-primary dark:text-text-dark dark:hover:text-primary-accent" href="#">Contact</a>
+</div>
+<div class="flex justify-center space-x-6">
+<a class="text-text-light hover:text-primary dark:text-text-dark dark:hover:text-primary-accent" href="#">
+<span class="sr-only">Facebook</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="text-text-light hover:text-primary dark:text-text-dark dark:hover:text-primary-accent" href="#">
+<span class="sr-only">Instagram</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 110-6 3 3 0 010 6zm6.406-11.845a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="text-text-light hover:text-primary dark:text-text-dark dark:hover:text-primary-accent" href="#">
+<span class="sr-only">LinkedIn</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24">
+<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+</svg>
+</a>
+</div>
+</div>
+<p class="mt-8 text-center text-sm text-text-light dark:text-text-dark">© 2024 AV Rentals Inc. All Rights Reserved.</p>
+</div>
+</footer>
+</div>
+</body></html>

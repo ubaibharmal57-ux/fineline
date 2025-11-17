@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AV Rentals - Contact &amp; Booking</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-slate-200 dark:border-slate-800 px-4 sm:px-6 lg:px-8 py-4 sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center gap-4">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold">AV Rentals</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Equipment</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-sm font-medium text-primary" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-colors">
+<span class="truncate">Get a Quote</span>
+</button>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-4 py-12 sm:px-6 lg:px-8">
+<!-- PageHeading -->
+<div class="mb-12 text-center">
+<h1 class="text-4xl font-black tracking-tighter sm:text-5xl">Contact &amp; Booking</h1>
+<p class="mt-3 max-w-2xl mx-auto text-lg text-slate-600 dark:text-slate-400">Fill out the form below to get a quote for your event. We're excited to help bring your vision to life.</p>
+</div>
+<!-- Two-Column Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16">
+<!-- Left Column (Form) -->
+<div class="lg:col-span-3 bg-white dark:bg-slate-900/50 p-6 sm:p-8 rounded-xl border border-slate-200 dark:border-slate-800">
+<h2 class="text-2xl font-bold tracking-tight mb-6">Let's Plan Your Event</h2>
+<form action="#" class="space-y-6" method="POST">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium pb-2" for="full-name">Full Name</label>
+<input class="form-input w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary" id="full-name" name="full-name" placeholder="Enter your full name" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium pb-2" for="email">Email Address</label>
+<input class="form-input w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary" id="email" name="email" placeholder="you@example.com" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium pb-2" for="event-type">Event Type</label>
+<select class="form-select w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary" id="event-type" name="event-type">
+<option>Select event type</option>
+<option>Corporate Event</option>
+<option>Wedding</option>
+<option>Concert</option>
+<option>Private Party</option>
+<option>Other</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium pb-2" for="event-date">Event Date</label>
+<input class="form-input w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary" id="event-date" name="event-date" type="date"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium pb-2" for="message">Message / Equipment Needed</label>
+<textarea class="form-textarea w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary" id="message" name="message" placeholder="Please list the equipment you need or describe your event." rows="5"></textarea>
+</div>
+<div>
+<button class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-bold text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:ring-offset-background-dark focus:ring-primary transition-colors" type="submit">
+                                Send Inquiry
+                            </button>
+</div>
+</form>
+</div>
+<!-- Right Column (Contact Info) -->
+<div class="lg:col-span-2">
+<div class="space-y-8">
+<div>
+<h3 class="text-xl font-bold tracking-tight mb-4">Contact Us Directly</h3>
+<div class="space-y-4 text-slate-600 dark:text-slate-400">
+<a class="flex items-center gap-4 group" href="tel:+1234567890">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">call</span>
+<span>(123) 456-7890</span>
+</a>
+<a class="flex items-center gap-4 group" href="mailto:contact@avrentals.com">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">mail</span>
+<span>contact@avrentals.com</span>
+</a>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-0.5">location_on</span>
+<span>123 Soundwave Ave,<br/>Techville, CA 90210</span>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold tracking-tight mb-4">Business Hours</h3>
+<ul class="space-y-2 text-slate-600 dark:text-slate-400">
+<li class="flex justify-between"><span>Monday - Friday</span><span>9:00 AM - 6:00 PM</span></li>
+<li class="flex justify-between"><span>Saturday</span><span>10:00 AM - 4:00 PM</span></li>
+<li class="flex justify-between"><span>Sunday</span><span>Closed</span></li>
+</ul>
+</div>
+<div class="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Abstract gradient of blues and purples" data-location="Techville, CA" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5ESh6qO6bYfZsAOdMvXGVrCHr5LOWKkJmqvA4Ge1pX_n3_wXEXPyFA0ujg0aAKEUjsHdOWgwN1PO7eJMlebdyea_TH0vmLjxmzbn4od5Unhs7FL3_n-fJcT-BfOp3wk2xYrad2jtJO22pPG67bQG0o7n0QXDnUBVH54jOoI1tF4WutO0WqXj1oJhcuPO00htlN4IxydXjl_6JuTQW0ty2hvPQQAyKYmniJUP0jWRrtVX4vptYbixnKiICwrd5EvlfHwT9lVwLxnB1"/>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-slate-900/50 border-t border-slate-200 dark:border-slate-800">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+<p class="text-sm text-slate-500 dark:text-slate-400">© 2024 AV Rentals. All Rights Reserved.</p>
+<div class="flex items-center gap-4">
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
