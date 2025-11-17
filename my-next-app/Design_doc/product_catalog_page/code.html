@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AV Rentals - Product Catalog</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+              "brand-primary": "#0A2540",
+              "brand-accent": "#007BFF",
+              "brand-neutral": "#F0F2F5",
+              "brand-text": "#333333",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-brand-text dark:text-gray-200">
+<div class="flex h-auto min-h-screen w-full flex-col">
+<!-- TopNavBar -->
+<header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 px-4 sm:px-6 lg:px-8 shadow-sm sticky top-0 z-50">
+<div class="mx-auto max-w-screen-xl">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 text-brand-primary dark:text-white">
+<span class="material-symbols-outlined text-3xl">local_movies</span>
+<h2 class="text-xl font-bold">AV Rentals</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary dark:hover:text-brand-accent" href="#">Home</a>
+<a class="text-sm font-medium text-primary dark:text-brand-accent" href="#">Products</a>
+<a class="text-sm font-medium hover:text-primary dark:hover:text-brand-accent" href="#">About Us</a>
+<a class="text-sm font-medium hover:text-primary dark:hover:text-brand-accent" href="#">Contact</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center">
+<label class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">search</span>
+<input class="form-input w-full min-w-0 flex-1 resize-none overflow-hidden rounded-full border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 h-10 placeholder:text-gray-400 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-brand-accent" placeholder="Search" type="search" value=""/>
+</label>
+</div>
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+</button>
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-xl">person</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="mx-auto max-w-screen-xl w-full px-4 sm:px-6 lg:px-8 py-8">
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- SideNavBar / Filters -->
+<aside class="w-full lg:w-64 xl:w-72 flex-shrink-0">
+<div class="sticky top-24">
+<div class="flex flex-col gap-6 bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-800">
+<h3 class="text-lg font-bold text-brand-primary dark:text-white">Filters</h3>
+<!-- Category Filter -->
+<div class="flex flex-col gap-3">
+<h4 class="font-semibold text-sm">Category</h4>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-2 text-sm"><input checked="" class="form-checkbox rounded text-primary focus:ring-primary/50" type="checkbox"/> Projectors</label>
+<label class="flex items-center gap-2 text-sm"><input class="form-checkbox rounded text-primary focus:ring-primary/50" type="checkbox"/> Laptops</label>
+<label class="flex items-center gap-2 text-sm"><input checked="" class="form-checkbox rounded text-primary focus:ring-primary/50" type="checkbox"/> LED Screens</label>
+<label class="flex items-center gap-2 text-sm"><input class="form-checkbox rounded text-primary focus:ring-primary/50" type="checkbox"/> Speakers</label>
+<label class="flex items-center gap-2 text-sm"><input class="form-checkbox rounded text-primary focus:ring-primary/50" type="checkbox"/> Microphones</label>
+</div>
+</div>
+<!-- Brand Filter -->
+<div class="flex flex-col gap-3">
+<h4 class="font-semibold text-sm">Brand</h4>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-2 text-sm"><input class="form-checkbox rounded text-primary focus:ring-primary/50" type="checkbox"/> Sony</label>
+<label class="flex items-center gap-2 text-sm"><input checked="" class="form-checkbox rounded text-primary focus:ring-primary/50" type="checkbox"/> Canon</label>
+<label class="flex items-center gap-2 text-sm"><input class="form-checkbox rounded text-primary focus:ring-primary/50" type="checkbox"/> Shure</label>
+<label class="flex items-center gap-2 text-sm"><input class="form-checkbox rounded text-primary focus:ring-primary/50" type="checkbox"/> Apple</label>
+</div>
+</div>
+<!-- Availability Filter -->
+<div class="flex flex-col gap-3">
+<h4 class="font-semibold text-sm">Availability</h4>
+<input class="form-input w-full rounded-lg border-gray-300 dark:border-gray-700 dark:bg-gray-800 focus:border-primary focus:ring-primary/50 text-sm" type="date"/>
+</div>
+<!-- Filter Buttons -->
+<div class="flex flex-col gap-2 mt-4">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-brand-primary hover:bg-opacity-90 text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors">Apply Filters</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-transparent text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 text-sm font-bold leading-normal tracking-[0.015em] transition-colors">Clear Filters</button>
+</div>
+</div>
+</div>
+</aside>
+<!-- Product Grid Section -->
+<div class="flex-1">
+<!-- PageHeading -->
+<div class="mb-6">
+<h1 class="text-brand-primary dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Our Equipment Catalog</h1>
+<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal mt-2">Find the perfect audio-visual gear for your next event.</p>
+</div>
+<!-- ToolBar -->
+<div class="flex flex-wrap items-center justify-between gap-4 mb-6 p-4 bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-800">
+<p class="text-sm text-gray-600 dark:text-gray-400">Showing 1–12 of 48 results</p>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<span class="text-sm text-gray-600 dark:text-gray-400">Sort by:</span>
+<select class="form-select rounded-lg border-gray-300 dark:border-gray-700 dark:bg-gray-800 focus:border-primary focus:ring-primary/50 text-sm">
+<option>Popularity</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Alphabetical A-Z</option>
+</select>
+</div>
+<div class="flex gap-1 p-1 bg-gray-100 dark:bg-gray-800 rounded-lg">
+<button class="p-2 rounded-md bg-white dark:bg-gray-900 text-primary dark:text-brand-accent shadow-sm">
+<span class="material-symbols-outlined">grid_view</span>
+</button>
+<button class="p-2 rounded-md text-gray-500 hover:bg-white/50 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined">view_list</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Product Card 1 -->
+<div class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 group">
+<div class="aspect-w-16 aspect-h-9 bg-gray-100 dark:bg-gray-800">
+<img alt="A white modern projector on a stand against a neutral background." class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA5OJbb5EYmOGhKUVORoByGSFFb69xNUGaQf3R-p9mqzQ2BZ--M-ysPiCLo08RrPtwONG-PpafAslHRnZIWZkICHggxvtec2LCrEx_vP0GtfAMj8RS_CnqZVlrXtcuxYxNlbRPdCCPTxeElPeG1Xhe0K_ZJveN7xh48EcPEpUXS8FPYM4dNqXJXBY5Un3U4Yn_trH9zk44V07nrmlpEYURyAv1O9RumxzY7q_r7KT0-dtSWv8SS6GeMx9WHJKNASiQCpl9KXnWzQLC"/>
+</div>
+<div class="p-5">
+<h3 class="text-lg font-bold text-brand-primary dark:text-white">4K Laser Projector</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Epson Pro EX9240 Full HD</p>
+<div class="flex justify-between items-center mt-4">
+<p class="text-lg font-extrabold text-brand-primary dark:text-white">$85<span class="text-sm font-medium text-gray-400">/day</span></p>
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-brand-accent text-white text-sm font-bold hover:bg-opacity-90 transition-colors">
+<span>Add to Cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 group">
+<div class="aspect-w-16 aspect-h-9 bg-gray-100 dark:bg-gray-800">
+<img alt="A large outdoor LED screen displaying a colorful abstract image at an event." class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGe71uCZdtEmyu1Hj1kS5rIDwZu_FKRk6IW2h59SktPG21YiVfHb7ALF3Q4lmSIkwzhFIh7VagLG8NBkecy3l-lJMiwl4xnE-1VsbjQCAgjPhttChgmfUthbx3_E80cA22T9on67_8r3SUn6XVM5eZppLSnaD5ST0XRpAfNyHuZTBVJisR1w1ElqegAkORt3JBYmxO0lbbumeOsI6_ZD1psUBoPYjj6W1SoHqxjQeUoZrB7x6W6Ij3fW5a4N7-IUUXvYAPfJLhAA4p"/>
+</div>
+<div class="p-5">
+<h3 class="text-lg font-bold text-brand-primary dark:text-white">Large LED Screen</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">10ft x 6ft Modular Video Wall</p>
+<div class="flex justify-between items-center mt-4">
+<p class="text-lg font-extrabold text-brand-primary dark:text-white">$350<span class="text-sm font-medium text-gray-400">/day</span></p>
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-brand-accent text-white text-sm font-bold hover:bg-opacity-90 transition-colors">
+<span>Add to Cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 group">
+<div class="aspect-w-16 aspect-h-9 bg-gray-100 dark:bg-gray-800">
+<img alt="A classic Shure SM58 microphone on a stand in a recording studio setting." class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfGrrz_lgSYvGqT_K-pHKxpDcwZJdWcVRVzaPCh_TNkpWeHsNu1IEhTrbcd2xtooUARc2lSeHwQdCVPJDT071gYmAHhf2DlV1afC5GgWJ-pu4D989JqWeWMkrE5p-M_hucQuFJlPcqdZL1n1mzRrU4YaIW6WCzBW8cpZiqCT88KWHFFY0Fbv2QgS12TEQkfLzbtBDgzu-WAoxEBo3A4m19mJMIDt-mPVsfB7_6Ysye7NEQDaqQ4tnqPTPLWmZUcK8vEg4Od_inNadk"/>
+</div>
+<div class="p-5">
+<h3 class="text-lg font-bold text-brand-primary dark:text-white">Wireless Microphone</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Shure SM58 Vocal Mic</p>
+<div class="flex justify-between items-center mt-4">
+<p class="text-lg font-extrabold text-brand-primary dark:text-white">$25<span class="text-sm font-medium text-gray-400">/day</span></p>
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-brand-accent text-white text-sm font-bold hover:bg-opacity-90 transition-colors">
+<span>Add to Cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 group">
+<div class="aspect-w-16 aspect-h-9 bg-gray-100 dark:bg-gray-800">
+<img alt="A pair of large JBL PA speakers on stands, ready for an event." class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsAsD3DSHBiQSfyAminbO1wj4wgt24OKTrS0c5tykeMONuAAtemWtW9NIltrUR7mdcHjRG9jCKiPriyOmqsXunlFKuq1HI_KSQsFfJOzDsH9g_HdpYBsIToRN4m-Vzx1Cc0zFMgG5YfAu1zNLxpcVJn2vXt7ApKkoudNLAsGXrr-4jV6Cv6ek5vg3Tw84jYURh-zTL6jhM20D_5EdvxPtnOQyxTF_CrkKcHX9yLTCvVddZQ8cu0BaZLtMvPffHdJbC8fNWlK9IyFzr"/>
+</div>
+<div class="p-5">
+<h3 class="text-lg font-bold text-brand-primary dark:text-white">PA System Speakers</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">JBL EON715 (Pair)</p>
+<div class="flex justify-between items-center mt-4">
+<p class="text-lg font-extrabold text-brand-primary dark:text-white">$120<span class="text-sm font-medium text-gray-400">/day</span></p>
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-brand-accent text-white text-sm font-bold hover:bg-opacity-90 transition-colors">
+<span>Add to Cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 group">
+<div class="aspect-w-16 aspect-h-9 bg-gray-100 dark:bg-gray-800">
+<img alt="A sleek MacBook Pro laptop open on a clean desk, displaying a creative software interface." class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTVtnN1OOu_Q1JQ116QhV4-OMhZbPe7ftAbSQJwYEunuYRJjJI49fxEjIrcKdrmfMiQcL6Cg-xKo7BM-RPETTsBqiqLN6iwqF26gQt0smrEOKqi_mE_xenfYDcsOanOsEL4lcmeEuGG5HAlRZPg2vmWyIi3DoUSe1bIlGcWBMCDZj2WklET0JAygrdxuPSeYB__ATvShThbUodjI2rfBnYkvi6aOws2YOea29DcBaZ_-nn0iP6kldaN1ydSCl_cOuiEyEIgVymQ8uo"/>
+</div>
+<div class="p-5">
+<h3 class="text-lg font-bold text-brand-primary dark:text-white">MacBook Pro 16"</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">M2 Chip, 16GB RAM</p>
+<div class="flex justify-between items-center mt-4">
+<p class="text-lg font-extrabold text-brand-primary dark:text-white">$95<span class="text-sm font-medium text-gray-400">/day</span></p>
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-brand-accent text-white text-sm font-bold hover:bg-opacity-90 transition-colors">
+<span>Add to Cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 group">
+<div class="aspect-w-16 aspect-h-9 bg-gray-100 dark:bg-gray-800">
+<img alt="A professional Sony Alpha series mirrorless camera with a lens attached, sitting on a tripod." class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZBZFP_pNfcBMsy3fb_TarRVPD0xQfpYqNJ7dY6CqfX-4q4v1GnEKlUIt7FGphuttKyIiCN4Y2FypuE30KK-Bqisc5DjCmseTFxUhRhqODrp-ZMTxM7CFquCyBBSM2IkkC8xdynnEijd3JFrouUKkvtEP3i-9ED4USh09QiJ0t5WG-3fIRwN-rvU95nM7Yj8sU5JM2dJZZyx-ms2IGAD8mIDIrT8SOJxg1OKHBbx_8fWAepL0pGuywcit10QjPbMbAeP3xz-2n_Cx8"/>
+</div>
+<div class="p-5">
+<h3 class="text-lg font-bold text-brand-primary dark:text-white">Sony A7 IV Camera</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Full-Frame Mirrorless</p>
+<div class="flex justify-between items-center mt-4">
+<p class="text-lg font-extrabold text-brand-primary dark:text-white">$150<span class="text-sm font-medium text-gray-400">/day</span></p>
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-brand-accent text-white text-sm font-bold hover:bg-opacity-90 transition-colors">
+<span>Add to Cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex items-center justify-center mt-12">
+<nav class="flex items-center gap-2">
+<a class="flex items-center justify-center h-10 w-10 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700" href="#">
+<span class="material-symbols-outlined">chevron_left</span>
+</a>
+<a class="flex items-center justify-center h-10 w-10 rounded-lg bg-brand-primary text-white font-bold" href="#">1</a>
+<a class="flex items-center justify-center h-10 w-10 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium" href="#">2</a>
+<a class="flex items-center justify-center h-10 w-10 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium" href="#">3</a>
+<span class="flex items-center justify-center h-10 w-10 text-gray-500">...</span>
+<a class="flex items-center justify-center h-10 w-10 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium" href="#">8</a>
+<a class="flex items-center justify-center h-10 w-10 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700" href="#">
+<span class="material-symbols-outlined">chevron_right</span>
+</a>
+</nav>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

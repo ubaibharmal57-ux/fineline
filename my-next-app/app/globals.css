@@ -1,0 +1,251 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0F172A;
+
+  /* Premium Gold & Luxury Color Palette - Original FSS Colors */
+  --fss-primary: #D4AF37;
+  --fss-primary-dark: #B8941F;
+  --fss-primary-light: #E8D08A;
+
+  --fss-secondary: #475569;
+  --fss-secondary-dark: #334155;
+
+  --fss-accent: #FB923C;
+  --fss-accent-dark: #EA580C;
+
+  /* Neutral Palette - Refined whites and grays */
+  --fss-neutral-50: #F8FAFC;
+  --fss-neutral-100: #F1F5F9;
+  --fss-neutral-200: #E2E8F0;
+  --fss-neutral-300: #CBD5E1;
+  --fss-neutral-700: #334155;
+  --fss-neutral-800: #1E293B;
+  --fss-neutral-900: #0F172A;
+
+  /* Premium Dark Shades */
+  --fss-dark-navy: #0A1628;
+  --fss-midnight: #020617;
+
+  /* Glassmorphism Variables */
+  --glass-bg: rgba(255, 255, 255, 0.9);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-fss-primary: var(--fss-primary);
+  --color-fss-primary-dark: var(--fss-primary-dark);
+  --color-fss-primary-light: var(--fss-primary-light);
+  --color-fss-secondary: var(--fss-secondary);
+  --color-fss-secondary-dark: var(--fss-secondary-dark);
+  --color-fss-accent: var(--fss-accent);
+  --color-fss-accent-dark: var(--fss-accent-dark);
+  --color-fss-neutral-50: var(--fss-neutral-50);
+  --color-fss-neutral-100: var(--fss-neutral-100);
+  --color-fss-neutral-200: var(--fss-neutral-200);
+  --color-fss-neutral-300: var(--fss-neutral-300);
+  --color-fss-neutral-700: var(--fss-neutral-700);
+  --color-fss-neutral-800: var(--fss-neutral-800);
+  --color-fss-neutral-900: var(--fss-neutral-900);
+  --color-fss-dark-navy: var(--fss-dark-navy);
+  --color-fss-midnight: var(--fss-midnight);
+  --font-sans: var(--font-figtree), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-figtree), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  font-feature-settings: 'liga' 1, 'calt' 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Better spacing and breathing room */
+section {
+  position: relative;
+}
+
+/* Glassmorphism utility classes - Renova-inspired clean style */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Premium gradient backgrounds - Gold/Yellow theme */
+.gradient-luxury {
+  background: linear-gradient(135deg, #D4AF37 0%, #FB923C 100%);
+}
+
+.gradient-dark {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0A1628 100%);
+}
+
+/* Smoother transitions */
+* {
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button,
+a {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes gradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Touch target sizing for mobile */
+@media (hover: none) and (pointer: coarse) {
+  button, a, input, select, textarea {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
