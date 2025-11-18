@@ -6,6 +6,7 @@ import WhyChooseUsSection from './components/WhyChooseUsSection';
 import TrustSection from './components/TrustSection';
 import AboutSection from './components/AboutSection';
 import JustDialBadge from './components/JustDialBadge';
+import StatsSection from './components/StatsSection';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <HeroSection />
       <CategorySection />
       <EventTypesSection />
+      <StatsSection />
       <WhyChooseUsSection />
       <WhyRentSection />
       <TrustSection />

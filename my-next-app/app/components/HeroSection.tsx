@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import FloatingElements from './FloatingElements';
 
 const heroSlides = [
   {
@@ -33,6 +34,12 @@ const heroSlides = [
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const { scrollY } = useScroll();
+
+  // Parallax effects
+  const y1 = useTransform(scrollY, [0, 500], [0, 150]);
+  const y2 = useTransform(scrollY, [0, 500], [0, -100]);
+  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -48,100 +55,145 @@ export default function HeroSection() {
 
   return (
     <section className="relative w-full h-screen min-h-[700px] overflow-hidden bg-white">
-      {/* Background Slides - Renova Style Minimal */}
+      {/* Animated gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-fss-primary/5 via-transparent to-fss-accent/5 animate-gradient opacity-50" />
+
+      {/* Floating elements */}
+      <FloatingElements count={15} />
+
+      {/* Background Slides with Parallax */}
       {heroSlides.map((slide, index) => (
         <motion.div
           key={index}
           initial={{ opacity: 0 }}
           animate={{ opacity: index === currentSlide ? 1 : 0 }}
-          transition={{ duration: 1.2, ease: 'easeInOut' }}
+          transition={{ duration: 1.5, ease: 'easeInOut' }}
           className="absolute inset-0"
+          style={{ y: y1 }}
         >
-          <div
-            className="absolute inset-0 bg-cover bg-center scale-105"
+          <motion.div
+            className="absolute inset-0 bg-cover bg-center"
             style={{
               backgroundImage: `linear-gradient(to right, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.75)), url('${slide.image}')`,
+              scale: 1.1,
             }}
+            animate={{
+              scale: index === currentSlide ? 1.05 : 1.1,
+            }}
+            transition={{ duration: 8, ease: 'easeOut' }}
           />
         </motion.div>
       ))}
 
-      {/* Content - Renova Clean Centered Layout */}
-      <div className="relative h-full flex items-center justify-center z-10">
+      {/* Content with Parallax */}
+      <motion.div
+        className="relative h-full flex items-center justify-center z-10"
+        style={{ y: y2, opacity }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-4xl">
             {heroSlides.map((slide, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 50 }}
                 animate={{
                   opacity: index === currentSlide ? 1 : 0,
-                  y: index === currentSlide ? 0 : 30,
+                  y: index === currentSlide ? 0 : 50,
                 }}
-                transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
+                transition={{ duration: 1, delay: 0.3, ease: 'easeOut' }}
                 className={index === currentSlide ? 'block' : 'hidden'}
               >
-                {/* Title - Renova Style Bold Typography */}
-                <h1 className="text-6xl sm:text-7xl lg:text-8xl font-black text-fss-neutral-900 mb-6 leading-[0.95] tracking-tight">
+                {/* Title with enhanced animation */}
+                <motion.h1
+                  className="text-6xl sm:text-7xl lg:text-8xl font-black text-fss-neutral-900 mb-6 leading-[0.95] tracking-tight"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={index === currentSlide ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                >
                   {slide.title}
                   <br />
-                  <span className="text-fss-primary">{slide.titleHighlight}</span>
-                </h1>
+                  <motion.span
+                    className="text-transparent bg-clip-text bg-gradient-to-r from-fss-primary via-fss-primary-light to-fss-accent animate-gradient"
+                    style={{ backgroundSize: '200% 200%' }}
+                  >
+                    {slide.titleHighlight}
+                  </motion.span>
+                </motion.h1>
 
-                {/* Subtitle - Clean and Professional */}
-                <p className="text-xl sm:text-2xl text-fss-secondary mb-12 font-normal max-w-2xl leading-relaxed">
+                {/* Subtitle with stagger */}
+                <motion.p
+                  className="text-xl sm:text-2xl text-fss-secondary mb-12 font-normal max-w-2xl leading-relaxed"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={index === currentSlide ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.8, delay: 0.7 }}
+                >
                   {slide.subtitle}
-                </p>
+                </motion.p>
 
-                {/* CTAs - Minimal Button Style */}
-                <div className="flex flex-col sm:flex-row gap-4">
+                {/* CTAs with enhanced hover effects */}
+                <motion.div
+                  className="flex flex-col sm:flex-row gap-4"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={index === currentSlide ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.8, delay: 0.9 }}
+                >
                   <Link
                     href="/equipment"
-                    className="inline-flex items-center justify-center px-8 py-4 bg-fss-primary hover:bg-fss-primary-dark text-white font-semibold rounded-lg transition-all duration-200"
+                    className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-fss-primary to-fss-primary-dark hover:from-fss-primary-dark hover:to-fss-primary text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-fss-primary/50 hover:scale-105"
                   >
-                    {slide.cta1}
+                    <span>{slide.cta1}</span>
+                    <span className="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
                   </Link>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center justify-center px-8 py-4 bg-transparent hover:bg-fss-neutral-900 text-fss-neutral-900 hover:text-white font-semibold rounded-lg border-2 border-fss-neutral-900 transition-all duration-200"
+                    className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/80 backdrop-blur-sm hover:bg-fss-neutral-900 text-fss-neutral-900 hover:text-white font-semibold rounded-lg border-2 border-fss-neutral-900 transition-all duration-300 shadow-lg hover:scale-105"
                   >
-                    {slide.cta2}
+                    <span>{slide.cta2}</span>
+                    <span className="material-symbols-outlined text-xl group-hover:rotate-45 transition-transform">arrow_outward</span>
                   </Link>
-                </div>
+                </motion.div>
               </motion.div>
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      {/* Slide Indicators - Renova Minimal Style */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+      {/* Enhanced Slide Indicators */}
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex gap-3 z-20">
         {heroSlides.map((_, index) => (
-          <button
+          <motion.button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`h-1.5 rounded-full transition-all duration-300 ${
+            className={`h-2 rounded-full transition-all duration-500 ${
               index === currentSlide
-                ? 'bg-fss-primary w-10'
-                : 'bg-fss-neutral-300 w-6 hover:bg-fss-neutral-400'
+                ? 'bg-gradient-to-r from-fss-primary to-fss-accent w-12 shadow-lg shadow-fss-primary/50'
+                : 'bg-fss-neutral-300 w-8 hover:bg-fss-neutral-400 hover:w-10'
             }`}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Enhanced Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
         className="absolute bottom-12 right-12 z-20 hidden lg:flex flex-col items-center gap-2"
       >
-        <span className="text-xs text-fss-secondary font-medium tracking-wider">SCROLL</span>
+        <motion.span
+          className="text-xs text-fss-primary font-bold tracking-widest"
+          animate={{ opacity: [0.5, 1, 0.5] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          SCROLL
+        </motion.span>
         <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-          className="w-px h-12 bg-fss-neutral-300"
+          animate={{ y: [0, 12, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+          className="w-0.5 h-16 bg-gradient-to-b from-fss-primary to-transparent rounded-full"
         />
       </motion.div>
     </section>
