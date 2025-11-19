@@ -137,32 +137,6 @@ export default function WhyChooseUsSection() {
           </motion.div>
         </div>
 
-        {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-fss-neutral-200"
-        >
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center group">
-              <div className="flex items-center justify-center gap-2 mb-2">
-                <span className="text-2xl">{stat.icon}</span>
-                <motion.h3
-                  initial={{ opacity: 0 }}
-                  animate={inView ? { opacity: 1 } : {}}
-                  transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                  className="text-4xl sm:text-5xl font-black text-fss-neutral-900 group-hover:text-fss-primary transition-colors duration-200"
-                >
-                  {stat.number}
-                </motion.h3>
-              </div>
-              <p className="text-sm sm:text-base text-fss-secondary font-medium">
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );

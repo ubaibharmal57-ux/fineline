@@ -130,49 +130,7 @@ export default function TrustSection() {
           </p>
         </motion.div>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {stats.map((stat, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ scale: 1.05, y: -5 }}
-              className="relative group"
-            >
-              <div className="glass-dark p-8 rounded-2xl border border-white/10 hover:border-fss-primary/50 transition-all duration-300">
-                {/* Icon */}
-                <div className="flex justify-center mb-6">
-                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${stat.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                    <span className="material-symbols-outlined text-white text-3xl">
-                      {stat.icon}
-                    </span>
-                  </div>
-                </div>
 
-                {/* Number */}
-                <div className={`text-5xl font-black mb-2 text-center bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
-                  <Counter end={stat.number} />
-                  {stat.suffix}
-                </div>
-
-                {/* Label */}
-                <div className="text-white text-lg font-bold text-center mb-2">
-                  {stat.label}
-                </div>
-
-                {/* Description */}
-                <div className="text-gray-400 text-sm text-center font-medium">
-                  {stat.description}
-                </div>
-
-                {/* Glow Effect on Hover */}
-                <div className={`absolute inset-0 bg-gradient-to-r ${stat.color} opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300 rounded-2xl -z-10`} />
-              </div>
-            </motion.div>
-          ))}
-        </div>
 
         {/* Trust Badges */}
         <motion.div
