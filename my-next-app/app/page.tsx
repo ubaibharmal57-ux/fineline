@@ -1,7 +1,6 @@
 import HeroSection from './components/HeroSection';
 import CategorySection from './components/CategorySection';
 import EventTypesSection from './components/EventTypesSection';
-import WhyRentSection from './components/WhyRentSection';
 import WhyChooseUsSection from './components/WhyChooseUsSection';
 import TrustSection from './components/TrustSection';
 import AboutSection from './components/AboutSection';
@@ -16,29 +15,28 @@ export default function Home() {
       <EventTypesSection />
       <StatsSection />
       <WhyChooseUsSection />
-      <WhyRentSection />
       <TrustSection />
       <AboutSection />
-      
+
       {/* Testimonials Section - Premium Design */}
-      <section className="w-full py-20 sm:py-28 relative overflow-hidden">
+      <section className="w-full py-20 sm:py-28 relative overflow-hidden bg-fss-dark-navy">
         {/* Premium Background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-fss-neutral-50 to-white" />
+        <div className="absolute inset-0 bg-gradient-to-b from-fss-dark-navy via-fss-neutral-900 to-fss-dark-navy" />
 
         {/* Decorative Elements */}
-        <div className="absolute inset-0 opacity-20 pointer-events-none">
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="absolute top-20 right-20 w-72 h-72 bg-fss-primary/20 rounded-full blur-3xl" />
           <div className="absolute bottom-20 left-20 w-72 h-72 bg-fss-accent/20 rounded-full blur-3xl" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-fss-primary/10 rounded-full mb-6 border border-fss-primary/20">
+            <div className="inline-flex items-center gap-2 px-6 py-3 glass-panel rounded-full mb-6 border border-fss-primary/20">
               <span className="material-symbols-outlined text-fss-primary text-xl">reviews</span>
               <span className="text-fss-primary font-bold text-sm tracking-wider uppercase">Client Success Stories</span>
             </div>
 
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-fss-neutral-900 tracking-tight mb-6 leading-tight">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight mb-6 leading-tight">
               Trusted by Thousands
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-fss-primary via-fss-primary-light to-fss-accent">
@@ -77,10 +75,10 @@ export default function Home() {
                 review: "Outstanding service! The technical support team was available round-the-clock during our 3-day conference. Their expertise and reliability are unmatched in the industry.",
               },
             ].map((testimonial, idx) => (
-              <div key={idx} className="glass rounded-3xl p-8 border-2 border-white/50 hover:border-fss-primary/30 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+              <div key={idx} className="glass-card rounded-3xl p-8 border border-white/5 hover:border-fss-primary/30 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
                 {/* Quote Icon */}
                 <div className="mb-6">
-                  <span className="material-symbols-outlined text-fss-primary text-5xl opacity-30">format_quote</span>
+                  <span className="material-symbols-outlined text-fss-primary text-5xl opacity-30 group-hover:opacity-100 transition-opacity">format_quote</span>
                 </div>
 
                 {/* Stars */}
@@ -91,17 +89,17 @@ export default function Home() {
                 </div>
 
                 {/* Review */}
-                <p className="text-fss-secondary mb-8 leading-relaxed text-base">
+                <p className="text-fss-neutral-300 mb-8 leading-relaxed text-base">
                   "{testimonial.review}"
                 </p>
 
                 {/* Author */}
-                <div className="flex items-center gap-4 pt-6 border-t border-fss-neutral-200">
-                  <div className="w-14 h-14 bg-gradient-to-br from-fss-primary to-fss-accent rounded-2xl flex items-center justify-center shadow-lg">
-                    <span className="text-white font-bold text-xl">{testimonial.initials}</span>
+                <div className="flex items-center gap-4 pt-6 border-t border-white/10">
+                  <div className="w-14 h-14 bg-gradient-to-br from-fss-primary to-fss-accent rounded-2xl flex items-center justify-center shadow-lg text-fss-dark-navy">
+                    <span className="font-bold text-xl">{testimonial.initials}</span>
                   </div>
                   <div>
-                    <div className="font-bold text-fss-neutral-900 text-lg">{testimonial.name}</div>
+                    <div className="font-bold text-white text-lg">{testimonial.name}</div>
                     <div className="text-sm text-fss-secondary font-medium">{testimonial.role}</div>
                   </div>
                 </div>
@@ -133,7 +131,7 @@ export default function Home() {
         />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="inline-flex items-center gap-2 px-6 py-3 glass-dark rounded-full mb-8 border border-fss-primary/30">
+          <div className="inline-flex items-center gap-2 px-6 py-3 glass-panel rounded-full mb-8 border border-fss-primary/30">
             <span className="material-symbols-outlined text-fss-primary text-xl">rocket_launch</span>
             <span className="text-fss-primary font-bold text-sm tracking-wider uppercase">
               Let's Get Started
@@ -157,14 +155,14 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
             <a
               href="/contact"
-              className="group inline-flex items-center justify-center gap-3 px-12 py-6 bg-gradient-to-r from-fss-primary to-fss-accent text-white text-lg font-bold rounded-2xl transition-all shadow-2xl hover:shadow-fss-primary/50 hover:scale-105"
+              className="group inline-flex items-center justify-center gap-3 px-12 py-6 bg-gradient-to-r from-fss-primary to-fss-accent text-fss-dark-navy text-lg font-bold rounded-2xl transition-all shadow-2xl hover:shadow-fss-primary/50 hover:scale-105"
             >
               Get Free Consultation
               <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
             </a>
             <a
               href="tel:+919876543210"
-              className="inline-flex items-center justify-center gap-3 px-12 py-6 glass-dark text-white text-lg font-bold rounded-2xl border-2 border-fss-primary/50 hover:border-fss-primary hover:bg-white/10 transition-all shadow-xl"
+              className="inline-flex items-center justify-center gap-3 px-12 py-6 glass-panel text-white text-lg font-bold rounded-2xl border-2 border-fss-primary/50 hover:border-fss-primary hover:bg-white/10 transition-all shadow-xl"
             >
               <span className="material-symbols-outlined text-2xl">call</span>
               Call Now
