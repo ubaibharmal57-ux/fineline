@@ -21,7 +21,6 @@ export default function Header() {
     { name: 'Home', href: '/' },
     { name: 'Equipment', href: '/equipment' },
     { name: 'Services', href: '/services' },
-    { name: 'Packages', href: '/packages' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];
@@ -50,7 +49,7 @@ export default function Header() {
                 />
               </div>
               <div className="flex flex-col">
-                <h2 className="text-lg font-bold text-white tracking-tight group-hover:text-fss-primary transition-colors">
+                <h2 className="text-lg font-bold text-white tracking-tight">
                   Fineline
                 </h2>
                 <p className="text-[10px] text-white uppercase tracking-widest">System & Services</p>

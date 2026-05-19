@@ -23,7 +23,6 @@ export default function StructuredData() {
     },
     "telephone": ["+919714595111", "+919825214052"],
     "email": "info@finelinesystem.com",
-    "priceRange": "₹500 - ₹50,000",
     "currenciesAccepted": "INR",
     "paymentAccepted": "Cash, UPI, Bank Transfer",
     "areaServed": [
@@ -119,7 +118,7 @@ export default function StructuredData() {
           "itemOffered": {
             "@type": "Service",
             "name": "Wedding AV Rental",
-            "description": "Complete wedding AV packages with LED wall, sound system and lighting"
+            "description": "Wedding AV setups with LED wall, sound system and lighting"
           }
         },
         {

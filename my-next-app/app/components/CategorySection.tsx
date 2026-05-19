@@ -3,112 +3,114 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import Card3D from './Card3D';
 
 const categories = [
   {
     id: 'projectors',
     title: 'Projectors & Screens',
-    description: 'HD & 4K projectors from ₹2,000/day',
+    description: 'Clear presentation setups for rooms, halls, and temporary stages.',
     icon: 'airplay',
-    link: '/equipment#projectors'
+    link: '/equipment#projectors',
   },
   {
     id: 'led-walls',
     title: 'LED Walls & Displays',
-    description: 'Indoor & outdoor LED walls from ₹100/sqft',
+    description: 'High-impact backdrops for ceremonies, launches, expos, and shows.',
     icon: 'tv',
-    link: '/equipment#led-walls'
-  },
-  {
-    id: 'tvs',
-    title: 'TVs & Digital Standees',
-    description: '43" to 65" LED TVs from ₹1,500/day',
-    icon: 'desktop_windows',
-    link: '/equipment#tvs'
+    link: '/equipment#led-walls',
   },
   {
     id: 'sound',
     title: 'Sound Systems & Audio',
-    description: 'PA systems & mics from ₹1,800/day',
+    description: 'Speech, music, and announcements tuned for the crowd size.',
     icon: 'speaker',
-    link: '/equipment#audio'
+    link: '/equipment#audio',
+  },
+  {
+    id: 'screens',
+    title: 'TVs & Digital Standees',
+    description: 'Welcome screens, booth displays, signage, and demo stations.',
+    icon: 'desktop_windows',
+    link: '/equipment#tvs',
   },
   {
     id: 'laptops',
     title: 'Laptops & Computers',
-    description: 'Business laptops from ₹700/day',
+    description: 'Devices for registration, presentations, demos, and workshops.',
     icon: 'laptop_mac',
-    link: '/equipment#laptops'
+    link: '/equipment#laptops',
   },
   {
     id: 'lighting',
     title: 'Lighting & Stage',
-    description: 'Stage lighting kits for any event',
+    description: 'Practical stage lighting for visibility, mood, and movement.',
     icon: 'wb_twilight',
-    link: '/equipment#lighting'
-  }
+    link: '/equipment#lighting',
+  },
 ];
 
 export default function CategorySection() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section ref={ref} className="w-full py-16 sm:py-20 bg-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-fss-primary/5 via-white to-fss-accent/5 opacity-40" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-fss-neutral-900 mb-4">
-            AV Equipment
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-fss-primary via-fss-primary-light to-fss-accent">
-              On Rent
-            </span>
-          </h2>
-          <p className="text-lg text-fss-neutral-700 max-w-2xl mx-auto">
-            Browse our extensive collection of professional audio-visual equipment available for rent in Rajkot and across Gujarat
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
-          {categories.map((category, index) => (
-            <motion.div
-              key={category.id}
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.08 }}
+    <section ref={ref} className="w-full bg-gradient-to-b from-white to-fss-neutral-50 py-16 sm:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-16 items-start">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6 }}
+            className="lg:sticky lg:top-28"
+          >
+            <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-fss-primary">
+              Start with the setup
+            </p>
+            <h2 className="text-4xl sm:text-5xl font-black leading-tight tracking-tight text-fss-neutral-900">
+              Choose the equipment around the room, not a random list.
+            </h2>
+            <p className="mt-6 text-lg leading-relaxed text-fss-neutral-700">
+              Tell us the venue, audience size, and event format. We help shape the AV setup so it
+              works for the actual space.
+            </p>
+            <Link
+              href="/equipment"
+              className="mt-8 inline-flex items-center gap-2 rounded-lg bg-fss-neutral-900 px-6 py-3 font-bold text-white transition-colors hover:bg-fss-neutral-800"
             >
-              <Card3D className="h-full" intensity={10}>
+              Explore equipment
+              <span className="material-symbols-outlined text-xl">arrow_forward</span>
+            </Link>
+          </motion.div>
+
+          <div className="overflow-hidden rounded-2xl border border-fss-neutral-200 bg-fss-neutral-50">
+            {categories.map((category, index) => (
+              <motion.div
+                key={category.id}
+                initial={{ opacity: 0, x: 24 }}
+                animate={inView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.45, delay: index * 0.06 }}
+              >
                 <Link
                   href={category.link}
-                  className="group block p-5 text-center bg-white hover:bg-gradient-to-br hover:from-fss-primary/5 hover:to-fss-accent/5 rounded-2xl border-2 border-fss-neutral-200 hover:border-fss-primary/50 shadow-md hover:shadow-2xl hover:shadow-fss-primary/20 transition-all h-full"
+                  className="group grid grid-cols-[auto_1fr_auto] items-center gap-5 border-b border-fss-neutral-200 bg-white p-5 transition-colors last:border-b-0 hover:bg-fss-primary/5 sm:p-6"
                 >
-                  <motion.div
-                    className="w-14 h-14 mx-auto mb-3 rounded-full bg-gradient-to-br from-fss-primary/10 to-fss-accent/10 flex items-center justify-center group-hover:from-fss-primary group-hover:to-fss-accent group-hover:shadow-lg group-hover:shadow-fss-primary/50 transition-all"
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    <span className="material-symbols-outlined text-fss-primary group-hover:text-white text-2xl transition-colors">
-                      {category.icon}
+                  <span className="flex h-12 w-12 items-center justify-center rounded-lg bg-fss-primary/10 text-fss-primary transition-colors group-hover:bg-fss-primary group-hover:text-white">
+                    <span className="material-symbols-outlined text-2xl">{category.icon}</span>
+                  </span>
+                  <span>
+                    <span className="block text-lg font-black text-fss-neutral-900">
+                      {category.title}
                     </span>
-                  </motion.div>
-
-                  <h3 className="text-sm font-bold text-fss-neutral-900 mb-1 group-hover:text-fss-primary transition-colors">
-                    {category.title}
-                  </h3>
-
-                  <p className="text-xs text-fss-neutral-700 leading-snug">
-                    {category.description}
-                  </p>
+                    <span className="mt-1 block text-sm leading-relaxed text-fss-neutral-700">
+                      {category.description}
+                    </span>
+                  </span>
+                  <span className="material-symbols-outlined text-fss-neutral-400 transition-transform group-hover:translate-x-1 group-hover:text-fss-primary">
+                    arrow_forward
+                  </span>
                 </Link>
-              </Card3D>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -2,9 +2,6 @@ import HeroSection from './components/HeroSection';
 import CategorySection from './components/CategorySection';
 import EventTypesSection from './components/EventTypesSection';
 import WhyChooseUsSection from './components/WhyChooseUsSection';
-import TrustSection from './components/TrustSection';
-import AboutSection from './components/AboutSection';
-import JustDialBadge from './components/JustDialBadge';
 import StatsSection from './components/StatsSection';
 import Link from 'next/link';
 
@@ -12,82 +9,26 @@ const whatsappMessage = encodeURIComponent(
   'Hi Fineline, I need AV equipment for an event. Can you share details?'
 );
 
-const packages = [
-  {
-    name: 'Corporate Conference Package',
-    price: '8,370',
-    bestFor: 'Board meetings, conferences, seminars',
-    items: [
-      '1x HD Projector (5000 lumens)',
-      '1x Projection Screen (8ft)',
-      '1x PA System Medium (4 speakers)',
-      '2x Wireless Microphone',
-      '1x Business Laptop',
-    ],
-    whatsappText: 'Hi, I am interested in the Corporate Conference Package. Please share details and pricing.',
-  },
-  {
-    name: 'Wedding Reception Package',
-    price: '14,080',
-    bestFor: 'Reception, sangeet, engagement',
-    items: [
-      '1x Indoor LED Wall 10x6ft',
-      '1x PA System Large (6+ speakers)',
-      '3x Wireless Microphone',
-      '1x LED TV 55" (welcome display)',
-      '1x On-site Technician',
-    ],
-    whatsappText: 'Hi, I am interested in the Wedding Reception Package. Please share details and pricing.',
-    popular: true,
-  },
-  {
-    name: 'College Seminar Package',
-    price: '6,120',
-    bestFor: 'Seminars, guest lectures, fests',
-    items: [
-      '1x HD Projector (5000 lumens)',
-      '1x Projection Screen (8ft)',
-      '1x PA System Small (2 speakers)',
-      '1x Wireless Microphone',
-      '1x Basic Laptop',
-    ],
-    whatsappText: 'Hi, I am interested in the College Seminar Package. Please share details and pricing.',
-  },
-  {
-    name: 'Exhibition Package',
-    price: '22,525',
-    bestFor: 'Trade shows, expos, product launches',
-    items: [
-      '1x Indoor LED Wall 12x8ft',
-      '2x Digital Standee (55")',
-      '2x LED TV 55" with Stand',
-      '3x Business Laptops',
-      '1x PA System + 2x Mics',
-    ],
-    whatsappText: 'Hi, I am interested in the Exhibition Package. Please share details and pricing.',
-  },
-];
-
 const faqItems = [
   {
-    question: 'What AV equipment can I rent from Fineline System & Services?',
-    answer: 'We offer a complete range of AV equipment on rent including HD & 4K projectors, LED walls, LED TVs, digital standees, sound systems, wireless microphones, laptops, and stage lighting. All equipment is professional-grade and well-maintained.'
+    question: 'What can Fineline provide for an event?',
+    answer: 'You can rent projectors, screens, LED walls, LED TVs, digital standees, sound systems, microphones, laptops, and stage lighting. We help you choose the right mix based on your venue and audience size.'
   },
   {
-    question: 'What areas do you serve in Gujarat?',
-    answer: 'We serve all of Gujarat and Saurashtra from our Rajkot headquarters. Our primary service areas include Rajkot, Jamnagar, Morbi, Junagadh, Bhavnagar, Gandhidham, Ahmedabad, Surat, Vadodara, Gandhinagar, and Anand. Free delivery and setup is included for Rajkot city.'
+    question: 'Which cities do you cover?',
+    answer: 'We are based in Rajkot and serve major cities across Gujarat and Saurashtra, including Ahmedabad, Jamnagar, Morbi, Junagadh, Bhavnagar, Gandhidham, Surat, Vadodara, Gandhinagar, and Anand.'
   },
   {
-    question: 'Do you provide delivery and setup?',
-    answer: 'Yes! We are a full-service AV rental company. Every rental includes professional delivery, complete setup at your venue, and an on-site technician to operate the equipment during your event. Free delivery and setup within Rajkot city.'
+    question: 'Will your team set everything up?',
+    answer: 'Yes. We bring the equipment to the venue, set it up, test the connections, and explain the handover. For events that need live support, a technician can stay on-site.'
   },
   {
-    question: 'What is the minimum rental duration?',
-    answer: 'Our minimum rental duration is 1 day. We also offer multi-day discounts for extended rentals. Contact us on WhatsApp for special pricing on events lasting 2 or more days.'
+    question: 'Can I rent equipment for one day?',
+    answer: 'Yes. Most rentals start from one day. Multi-day events, exhibitions, college programs, and training setups can be quoted separately.'
   },
   {
-    question: 'How do I book equipment?',
-    answer: 'The easiest way to book is through WhatsApp at +91 97145 95111. Simply tell us your event type, date, city, and equipment needs. We will send you a detailed quote within 30 minutes during business hours. You can also call us or fill out the form on our contact page.'
+    question: 'What should I send for a quote?',
+    answer: 'Share the event date, city, venue type, expected audience size, and the equipment you have in mind. If you are not sure, tell us the event format and we will suggest a practical setup.'
   },
 ];
 
@@ -105,6 +46,65 @@ const serviceAreas = [
   { city: 'Anand', href: '/' },
 ];
 
+const reviewCards = [
+  {
+    name: 'Varas',
+    source: 'JustDial',
+    date: 'Apr 2024',
+    text: 'Praised the outdoor LED screen clarity and fast service at a reasonable price.',
+    service: 'LED screen rental',
+  },
+  {
+    name: 'Hussain',
+    source: 'JustDial',
+    date: 'May 2024',
+    text: 'Booked a screen and projector for an IPL event and appreciated the quick service.',
+    service: 'Projector and screen',
+  },
+  {
+    name: 'Taha',
+    source: 'JustDial',
+    date: 'Sep 2024',
+    text: 'Highlighted the LED screen quality and value received from the Fineline team.',
+    service: 'LED screen setup',
+  },
+  {
+    name: 'Dipen Ramavat',
+    source: 'JustDial',
+    date: 'May 2024',
+    text: 'Rented 55 inch and 43 inch TVs and noted the 4K quality and reliable service.',
+    service: 'TV rental',
+  },
+  {
+    name: 'RAAJ TIMBA',
+    source: 'JustDial',
+    date: 'May 2024',
+    text: 'Used projector, screen, and speakers for an IPL gathering and called the event handling smooth.',
+    service: 'Event AV setup',
+  },
+  {
+    name: 'Sanket',
+    source: 'JustDial',
+    date: 'Jan 2025',
+    text: 'Rented laptops and computers, mentioning fast service and strong product quality.',
+    service: 'Laptop rental',
+  },
+  {
+    name: 'Raj Varmora',
+    source: 'JustDial',
+    date: 'May 2024',
+    text: 'Booked a 4K LED TV and LED screen for a movie setup and thanked the FSS team.',
+    service: 'TV and LED screen',
+  },
+  {
+    name: 'Aryan Singh',
+    source: 'JustDial',
+    date: 'May 2024',
+    text: 'Recommended the LED service for its quality and affordable pricing.',
+    service: 'LED service',
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -114,126 +114,106 @@ export default function Home() {
       <StatsSection />
       <WhyChooseUsSection />
 
-      {/* Popular Packages Section */}
-      <section className="w-full py-20 sm:py-28 bg-fss-neutral-50">
+      {/* Reviews Section */}
+      <section className="w-full py-12 sm:py-16 bg-gradient-to-b from-fss-neutral-900 to-fss-dark-navy overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-fss-primary/10 rounded-full mb-4">
-              <span className="material-symbols-outlined text-fss-primary text-sm">local_offer</span>
-              <span className="text-sm font-semibold text-fss-primary">Ready-Made Packages</span>
+          <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-6 lg:gap-10 items-end mb-7">
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-fss-primary/15 rounded-full mb-4">
+                <span className="material-symbols-outlined text-fss-primary text-lg">reviews</span>
+                <span className="text-sm font-bold text-fss-primary uppercase tracking-wide">Client Reviews</span>
+              </div>
+              <h2 className="text-4xl sm:text-5xl font-black text-white tracking-tight leading-tight">
+                What clients notice after setup.
+              </h2>
+              <p className="mt-4 text-lg leading-relaxed text-white/75">
+                The common themes are simple: the screen is visible, the sound is clear, and the
+                team responds when the program changes.
+              </p>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-fss-neutral-900 mb-4">
-              Popular AV Rental Packages
-            </h2>
-            <p className="text-lg text-fss-neutral-700 max-w-2xl mx-auto">
-              Pre-built packages for common event types. Save more with bundled pricing. All packages include free delivery, setup & technician in Rajkot.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {packages.map((pkg, idx) => (
-              <div
-                key={idx}
-                className={`relative bg-white rounded-2xl border-2 ${
-                  pkg.popular ? 'border-fss-primary shadow-xl shadow-fss-primary/10' : 'border-fss-neutral-200'
-                } p-6 hover:shadow-xl transition-shadow flex flex-col`}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <a
+                href="https://www.google.com/maps/place/Fineline+System+%26+Service/@22.2991448,70.8023745,17z/data=!3m1!4b1!4m6!3m5!1s0x3959ca03c18fffbb:0x334e3d9ae98f1cbe!8m2!3d22.2991448!4d70.8049494!16s%2Fg%2F11c61hbv_g?entry=ttu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl border border-white/10 bg-white/8 p-5 transition-colors hover:border-fss-primary"
               >
-                {pkg.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-fss-primary text-white text-xs font-bold px-4 py-1 rounded-full">
-                    Most Popular
-                  </div>
-                )}
-                <h3 className="text-lg font-bold text-fss-neutral-900 mb-2">{pkg.name}</h3>
-                <div className="mb-4">
-                  <span className="text-xs text-fss-neutral-700 uppercase font-semibold">Starting at</span>
+                <div className="flex items-center gap-3">
+                  <span className="material-symbols-outlined text-3xl text-fss-primary">map</span>
                   <div>
-                    <span className="text-3xl font-black text-fss-primary">&#8377;{pkg.price}</span>
-                    <span className="text-sm text-fss-neutral-700">/day</span>
+                    <div className="text-3xl font-black text-white">200+</div>
+                    <div className="text-sm font-semibold text-white/70">Google Maps reviews</div>
                   </div>
                 </div>
-                <p className="text-xs text-fss-neutral-700 mb-4 px-3 py-1.5 bg-fss-neutral-50 rounded-lg inline-block">
-                  Best for: {pkg.bestFor}
-                </p>
-                <ul className="space-y-2 mb-6 flex-1">
-                  {pkg.items.map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-fss-neutral-700">
-                      <span className="material-symbols-outlined text-green-500 text-base mt-0.5">check_circle</span>
-                      {item}
-                    </li>
-                  ))}
-                  <li className="flex items-start gap-2 text-sm text-green-600 font-medium">
-                    <span className="material-symbols-outlined text-green-500 text-base mt-0.5">local_shipping</span>
-                    Free delivery + setup (Rajkot)
-                  </li>
-                </ul>
-                <a
-                  href={`https://wa.me/919714595111?text=${encodeURIComponent(pkg.whatsappText)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-green-500 hover:bg-green-600 text-white font-bold rounded-xl transition-colors text-sm"
+              </a>
+              <a
+                href="https://www.justdial.com/Rajkot/Fineline-System-and-Services-Para-Bazar/0281PX281-X281-1231758120W4Y1M8-DC_BZDET?utm=JDBadge"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl border border-white/10 bg-white/8 p-5 transition-colors hover:border-fss-primary"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="material-symbols-outlined text-3xl text-fss-primary">verified</span>
+                  <div>
+                    <div className="text-3xl font-black text-white">250+</div>
+                    <div className="text-sm font-semibold text-white/70">JustDial reviews</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-white/10 bg-white/8 p-4 sm:p-5 lg:p-6">
+            <div className="relative overflow-hidden">
+              <div className="review-marquee flex gap-5 pr-5">
+                {[...reviewCards, ...reviewCards].map((review, index) => (
+                <article
+                  key={`${review.name}-${review.date}-${index}`}
+                  className="flex-none w-[280px] sm:w-[330px] min-h-[260px] rounded-xl border border-white/10 bg-white p-5"
+                  tabIndex={0}
                 >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                  </svg>
-                  Get This Package
-                </a>
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <h3 className="font-black text-fss-neutral-900">{review.name}</h3>
+                      <p className="mt-1 text-xs font-bold uppercase tracking-wide text-fss-primary">
+                        {review.source} - {review.date}
+                      </p>
+                    </div>
+                    <div className="flex shrink-0 text-fss-primary" aria-label="5 star review">
+                      {Array.from({ length: 5 }).map((_, index) => (
+                        <span key={index} className="material-symbols-outlined text-base">
+                          star
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <p className="mt-5 text-base leading-relaxed text-fss-neutral-800">
+                    {review.text}
+                  </p>
+                  <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-fss-neutral-700">
+                    <span className="material-symbols-outlined text-base text-fss-primary">event_available</span>
+                    {review.service}
+                  </div>
+                </article>
+                ))}
               </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-10">
-            <Link
-              href="/packages"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-fss-neutral-900 text-white font-bold rounded-xl hover:bg-fss-neutral-800 transition-colors"
-            >
-              View All Packages & Customize
-              <span className="material-symbols-outlined">arrow_forward</span>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <TrustSection />
-      <AboutSection />
-
-      {/* Reviews Section - JustDial Badge */}
-      <section className="w-full py-20 sm:py-28 relative overflow-hidden bg-fss-dark-navy">
-        <div className="absolute inset-0 bg-gradient-to-b from-fss-dark-navy via-fss-neutral-900 to-fss-dark-navy" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-6 py-3 glass-panel rounded-full mb-6 border border-fss-primary/20">
-              <span className="material-symbols-outlined text-fss-primary text-xl">reviews</span>
-              <span className="text-fss-primary font-bold text-sm tracking-wider uppercase">Client Reviews</span>
             </div>
-            <h2 className="text-4xl sm:text-5xl font-black text-white tracking-tight mb-6 leading-tight">
-              Trusted by Thousands
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-fss-primary via-fss-primary-light to-fss-accent">
-                Across Gujarat
-              </span>
-            </h2>
-            <p className="text-xl text-fss-neutral-700 max-w-3xl mx-auto mb-8 leading-relaxed">
-              Check out our verified reviews from real clients on JustDial
-            </p>
-            <div className="flex justify-center mb-8">
-              <JustDialBadge />
-            </div>
-            <p className="text-fss-neutral-700">
-              200+ reviews on JustDial and 150+ reviews on Google from satisfied clients across Rajkot, Ahmedabad, Surat, and all of Gujarat.
-            </p>
+
           </div>
         </div>
       </section>
 
       {/* Service Area Section */}
-      <section className="w-full py-16 sm:py-20 bg-white">
+      <section className="w-full py-16 sm:py-20 bg-fss-neutral-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-black text-fss-neutral-900 mb-4">
-              AV Equipment Rental Across Gujarat
+              Based in Rajkot. Working across Gujarat.
             </h2>
             <p className="text-lg text-fss-neutral-700 max-w-2xl mx-auto">
-              Based in Rajkot, we deliver and set up professional AV equipment across all of Saurashtra and Gujarat
+              Local coordination for Rajkot events, with planned delivery and setup support for
+              surrounding cities.
             </p>
           </div>
 
@@ -243,7 +223,7 @@ export default function Home() {
               <div className="p-4 bg-gradient-to-r from-fss-primary to-fss-accent">
                 <h3 className="text-lg font-bold text-white flex items-center gap-2">
                   <span className="material-symbols-outlined">location_on</span>
-                  Our Location — Rajkot, Gujarat
+                  Fineline location - Rajkot
                 </h3>
               </div>
               <div className="relative w-full" style={{ paddingBottom: '75%' }}>
@@ -261,7 +241,7 @@ export default function Home() {
 
             {/* Cities */}
             <div>
-              <h3 className="text-xl font-bold text-fss-neutral-900 mb-6">Cities We Serve</h3>
+              <h3 className="text-xl font-bold text-fss-neutral-900 mb-6">Common service cities</h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {serviceAreas.map((area) => (
                   <Link
@@ -280,8 +260,8 @@ export default function Home() {
                 ))}
               </div>
               <p className="mt-4 text-sm text-fss-neutral-700">
-                Free delivery & setup in Rajkot city. Nominal delivery charges for other cities.
-                All rentals include professional setup and on-site technician.
+                Rajkot bookings are easiest to coordinate. For other cities, transport and crew
+                timing are confirmed with your quote.
               </p>
             </div>
           </div>
@@ -293,10 +273,10 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-black text-fss-neutral-900 mb-4">
-              Frequently Asked Questions
+              Quick answers before you book
             </h2>
             <p className="text-lg text-fss-neutral-700">
-              Common questions about AV equipment rental in Rajkot & Gujarat
+              Short answers for the questions most people ask before confirming AV equipment.
             </p>
           </div>
 
@@ -331,17 +311,17 @@ export default function Home() {
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-8 leading-tight">
-            Ready to Elevate<br />
-            Your Event?
+            Tell us the venue.<br />
+            We will shape the setup.
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-fss-primary via-fss-primary-light to-fss-accent">
-              Get Your Free Quote Now
+              Get a practical AV quote
             </span>
           </h2>
 
           <p className="text-xl sm:text-2xl text-white mb-12 max-w-3xl mx-auto leading-relaxed">
-            Professional AV equipment rental with 24+ years of expertise.
+            Share the date, city, guest count, and event type.
             <br />
-            <span className="text-fss-primary-light font-semibold">Free delivery & setup in Rajkot!</span>
+            <span className="text-fss-primary-light font-semibold">We will recommend only what the event needs.</span>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
@@ -354,7 +334,7 @@ export default function Home() {
               <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
               </svg>
-              Get Instant Quote on WhatsApp
+              Send event details on WhatsApp
               <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
             </a>
             <a
@@ -362,7 +342,7 @@ export default function Home() {
               className="inline-flex items-center justify-center gap-3 px-12 py-6 glass-panel text-white text-lg font-bold rounded-2xl border-2 border-fss-primary/50 hover:border-fss-primary hover:bg-white/10 transition-all shadow-xl"
             >
               <span className="material-symbols-outlined text-2xl">call</span>
-              Call +91 97145 95111
+              Call for availability
             </a>
           </div>
 

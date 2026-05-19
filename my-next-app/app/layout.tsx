@@ -23,10 +23,10 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.finelinesystem.com'),
   title: {
-    default: "AV Equipment Rental in Rajkot & Gujarat | Projector, LED Screen, Sound System on Rent — Fineline System & Services",
+    default: "AV Equipment Rental in Rajkot & Gujarat | Fineline System & Services",
     template: "%s | Fineline System & Services"
   },
-  description: "Rent projectors, LED screens, sound systems, laptops & more in Rajkot & all Gujarat. Full-service AV rental with delivery, setup & technician. Since 2001. Call +91 97145 95111",
+  description: "Rent projectors, LED walls, sound systems, displays, laptops, and lighting for events in Rajkot and across Gujarat. Setup planning and crew support available.",
   keywords: [
     "projector on rent in Rajkot",
     "LED screen rental Rajkot",
@@ -59,8 +59,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
     url: 'https://www.finelinesystem.com',
-    title: 'AV Equipment Rental in Rajkot & Gujarat — Fineline System & Services',
-    description: 'Rent projectors, LED screens, sound systems & laptops. Full-service with delivery, setup & technician. Since 2001.',
+    title: 'AV Equipment Rental in Rajkot & Gujarat - Fineline System & Services',
+    description: 'Projectors, LED walls, sound systems, displays, laptops, and lighting for events across Gujarat.',
     siteName: 'Fineline System & Services',
     images: [{
       url: '/og-image.jpg',
@@ -71,8 +71,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AV Equipment Rental in Rajkot & Gujarat — Fineline System & Services',
-    description: 'Rent projectors, LED screens, sound systems & laptops. Full-service with delivery, setup & technician. Since 2001.',
+    title: 'AV Equipment Rental in Rajkot & Gujarat - Fineline System & Services',
+    description: 'Projectors, LED walls, sound systems, displays, laptops, and lighting for events across Gujarat.',
     images: ['/og-image.jpg'],
   },
   robots: {

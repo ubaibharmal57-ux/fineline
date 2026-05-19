@@ -16,7 +16,7 @@ export default function JustDialBadge() {
 
   return (
     <div className="flex flex-col items-center gap-2">
-      <p className="text-sm font-semibold text-fss-neutral-900">200+ Reviews on JustDial</p>
+      <p className="text-sm font-semibold text-fss-neutral-900">250+ Reviews on JustDial</p>
       <div id="JdBadge" data-s1="b2" data-s2="Y3RyY3QlNDAlNDAlNDAwMjgxUFgyODElMkJYMjgxJTJCMTIzMTc1ODEyMFc0WTFNOCUyQkRD"></div>
       <div id="JdBadgeDest"></div>
     </div>

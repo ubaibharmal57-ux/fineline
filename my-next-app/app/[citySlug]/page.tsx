@@ -29,25 +29,25 @@ const cityPages: Record<string, CityData> = {
     distanceFromRajkot: 'Headquarters — Kandoi Bazar Chowk',
     popularVenues: ['Race Course Hotels', 'Kalawad Road Party Plots', 'University Auditoriums', 'Aji Dam Area Venues', 'Yagnik Road Conference Halls'],
     faq: [
-      { question: 'What is the cost of projector rental in Rajkot?', answer: 'Projector rental in Rajkot starts from ₹2,000/day for HD projectors (3000-4000 lumens). High-brightness projectors (5000+ lumens) for larger conferences cost ₹3,500/day. All projector rentals include free delivery, setup, and a projection screen within Rajkot city.' },
+      { question: 'How do I get a projector quote in Rajkot?', answer: 'Share your venue, date, audience size, room brightness, and presentation format on WhatsApp. We will recommend the right projector brightness, screen size, and setup plan for Rajkot.' },
       { question: 'Do you offer free delivery in Rajkot?', answer: 'Yes! All AV equipment rentals in Rajkot come with free delivery, professional setup, and an on-site technician. We are based in Kandoi Bazar Chowk, so we can even offer same-day delivery for last-minute events.' },
-      { question: 'Can I rent LED walls for a wedding in Rajkot?', answer: 'Absolutely. LED wall rental for weddings in Rajkot is one of our most popular services. Our Wedding Reception Package starts at around ₹14,080/day and includes a 10x6ft indoor LED wall, PA system, microphones, and a welcome display TV.' },
+      { question: 'Can I rent LED walls for a wedding in Rajkot?', answer: 'Absolutely. LED wall rental for weddings in Rajkot is one of our most popular services. We can plan the LED wall, PA system, microphones, welcome display, and technician support together.' },
     ]
   },
   'projector-on-rent-in-rajkot': {
     slug: 'projector-on-rent-in-rajkot',
     city: 'Rajkot',
     service: 'Projector on Rent',
-    metaTitle: 'Projector on Rent in Rajkot — HD & 4K Projectors from ₹2,000/day | Fineline',
-    metaDescription: 'Rent HD & 4K projectors in Rajkot with free screen, delivery & setup. Starting ₹2,000/day. 24+ years experience. Call +91 97145 95111.',
+    metaTitle: 'Projector on Rent in Rajkot — HD & 4K Projectors | Fineline',
+    metaDescription: 'Rent HD & 4K projectors in Rajkot with screen, delivery & setup. 24+ years experience. Call +91 97145 95111.',
     h1: 'Projector on Rent in Rajkot — With Screen, Delivery & Setup',
-    intro: `Looking for a projector on rent in Rajkot? Fineline System & Services offers HD and 4K projectors for rent in Rajkot starting from just ₹2,000 per day. Every projector rental in Rajkot includes a free projection screen, professional delivery, and complete setup at your venue. Whether you need a projector for a corporate presentation at a Rajkot hotel, a training session at your office, or a movie screening at a family event, we have the right projector for your needs. Our projectors range from 3000 lumens for small rooms to 7000+ lumens 4K laser projectors for large auditoriums and outdoor events in Rajkot.`,
+    intro: `Looking for a projector on rent in Rajkot? Fineline System & Services offers HD and 4K projectors for meetings, trainings, screenings, and events across Rajkot. Every projector rental can include a projection screen, professional delivery, and complete setup at your venue. Whether you need a projector for a corporate presentation at a Rajkot hotel, a training session at your office, or a movie screening at a family event, we have the right projector for your needs. Our projectors range from 3000 lumens for small rooms to 7000+ lumens 4K laser projectors for large auditoriums and outdoor events in Rajkot.`,
     deliveryTime: 'Same day (free delivery & setup in Rajkot)',
     distanceFromRajkot: 'Headquarters',
     popularVenues: ['Corporate Offices', 'Hotels on Race Course', 'Training Centers', 'Educational Institutions', 'Community Halls'],
     faq: [
-      { question: 'How much does projector rental cost in Rajkot?', answer: 'Projector rental in Rajkot starts from ₹2,000/day for HD projectors (3000-4000 lumens) suitable for meetings up to 50 people. High-brightness 5000+ lumens projectors cost ₹3,500/day for conferences. 4K laser projectors (7000+ lumens) for premium events cost ₹7,000/day.' },
-      { question: 'Does the projector come with a screen?', answer: 'Yes! Every projector rental in Rajkot includes a free tripod projection screen (6ft or 8ft). Larger motorized screens (10ft+) are available at ₹1,500/day.' },
+      { question: 'How do I get the right projector quote in Rajkot?', answer: 'Send your venue, date, audience size, screen distance, and whether the room is bright or dark. We will suggest the right projector and share the quote on WhatsApp.' },
+      { question: 'Does the projector come with a screen?', answer: 'Yes. Projector bookings can include tripod screens for smaller rooms and larger motorized screens for auditoriums, halls, and premium events.' },
       { question: 'Can I get same-day projector delivery in Rajkot?', answer: 'Yes, we offer same-day projector delivery in Rajkot. Since we are based in Kandoi Bazar Chowk, we can deliver and set up equipment within 2-3 hours for urgent requirements.' },
     ]
   },
@@ -55,16 +55,16 @@ const cityPages: Record<string, CityData> = {
     slug: 'led-screen-on-rent-in-rajkot',
     city: 'Rajkot',
     service: 'LED Screen on Rent',
-    metaTitle: 'LED Screen & LED Wall on Rent in Rajkot — From ₹100/sqft | Fineline',
-    metaDescription: 'Rent indoor & outdoor LED walls in Rajkot from ₹100/sqft/day. Perfect for weddings, corporate events & exhibitions. Free setup. Call +91 97145 95111.',
+    metaTitle: 'LED Screen & LED Wall on Rent in Rajkot | Fineline',
+    metaDescription: 'Rent indoor & outdoor LED walls in Rajkot for weddings, corporate events & exhibitions. Professional setup and support. Call +91 97145 95111.',
     h1: 'LED Screen & LED Wall on Rent in Rajkot',
     intro: `Need an LED screen or LED wall on rent in Rajkot? Fineline System & Services provides high-resolution indoor and outdoor LED walls for weddings, corporate events, exhibitions, and concerts across Rajkot. Our LED walls in Rajkot are available in various sizes from compact 6x4ft displays to massive 12x8ft video walls. LED screen rental in Rajkot is one of our most popular services, especially for wedding receptions where families display pre-wedding photos and videos on stunning LED walls. We also supply LED screens for trade shows at exhibition centers, product launches, and corporate events throughout Rajkot city.`,
     deliveryTime: 'Same day (free delivery & setup in Rajkot)',
     distanceFromRajkot: 'Headquarters',
     popularVenues: ['Wedding Party Plots', 'Exhibition Halls', 'Corporate Event Venues', 'Hotel Banquet Halls', 'Outdoor Event Grounds'],
     faq: [
-      { question: 'How much does LED wall rental cost in Rajkot?', answer: 'Indoor LED wall rental in Rajkot starts from ₹100/sqft/day (P3/P3.9 resolution). Outdoor LED walls start from ₹130/sqft/day (P4.8/P5). Our most popular package is the 6x4ft LED wall at ₹2,500/day.' },
-      { question: 'What size LED wall do I need for a wedding in Rajkot?', answer: 'For most wedding receptions in Rajkot, we recommend a 10x6ft LED wall (₹6,000/day) which is clearly visible in large banquet halls. For smaller venues, a 6x4ft wall (₹2,500/day) works well.' },
+      { question: 'How do I get an LED wall quote in Rajkot?', answer: 'Share the venue, indoor or outdoor location, stage size, event timing, and content format. We will recommend the LED wall size and send the quote on WhatsApp.' },
+      { question: 'What size LED wall do I need for a wedding in Rajkot?', answer: 'For most wedding receptions in Rajkot, a 10x6ft LED wall works well in large banquet halls. For smaller venues, a 6x4ft wall can be enough when positioned correctly.' },
       { question: 'Do you provide outdoor LED walls in Rajkot?', answer: 'Yes, we provide weather-resistant outdoor LED walls (P4.8/P5) for outdoor events in Rajkot. These are brighter and designed to be clearly visible even in daylight.' },
     ]
   },
@@ -72,33 +72,33 @@ const cityPages: Record<string, CityData> = {
     slug: 'sound-system-on-rent-in-rajkot',
     city: 'Rajkot',
     service: 'Sound System on Rent',
-    metaTitle: 'Sound System & PA System on Rent in Rajkot — From ₹1,800/day | Fineline',
-    metaDescription: 'Rent professional PA systems, speakers & microphones in Rajkot from ₹1,800/day. With technician. For weddings, corporate events & more. Call +91 97145 95111.',
+    metaTitle: 'Sound System & PA System on Rent in Rajkot | Fineline',
+    metaDescription: 'Rent professional PA systems, speakers & microphones in Rajkot with technician support for weddings, corporate events & more. Call +91 97145 95111.',
     h1: 'Sound System & PA System on Rent in Rajkot',
     intro: `Fineline System & Services provides professional sound systems and PA systems on rent in Rajkot for all types of events. From compact 2-speaker PA systems for small meetings to large 6+ speaker setups for weddings and outdoor events, we have the right sound system for your needs in Rajkot. Every sound system rental in Rajkot includes wireless microphones, a professional mixer, and a trained technician who operates the system throughout your event. We also offer DJ sound systems for sangeet ceremonies, garba nights, and parties in Rajkot. Our sound equipment is regularly maintained and tested to ensure crystal-clear audio at every event.`,
     deliveryTime: 'Same day (free delivery & setup in Rajkot)',
     distanceFromRajkot: 'Headquarters',
     popularVenues: ['Wedding Venues', 'Corporate Halls', 'College Auditoriums', 'Outdoor Grounds', 'Religious Functions'],
     faq: [
-      { question: 'How much does sound system rental cost in Rajkot?', answer: 'PA system rental in Rajkot starts from ₹1,800/day for a small system (2 speakers + mic, up to 50 people). Medium systems cost ₹3,500/day (4 speakers, 50-200 people). Large systems for 200+ people cost ₹7,000/day.' },
-      { question: 'Do you provide wireless microphones with the sound system?', answer: 'Yes, every PA system rental in Rajkot includes at least one wireless handheld microphone. Additional wireless mics are available at ₹500/day and collar/lapel mics at ₹700/day.' },
-      { question: 'Can I rent a DJ sound system in Rajkot?', answer: 'Yes! Our full DJ sound system setup in Rajkot costs ₹8,000/day and includes large speakers, subwoofers, mixer, and DJ equipment. Perfect for sangeet, garba nights, and parties.' },
+      { question: 'How do I choose the right sound system in Rajkot?', answer: 'Tell us the venue type, audience size, indoor or outdoor setup, and whether you need speeches, music, DJ, or performances. We will suggest the PA size and microphone plan.' },
+      { question: 'Do you provide wireless microphones with the sound system?', answer: 'Yes, PA system rentals can include wireless handheld microphones, collar mics, mixer support, and a technician depending on the event format.' },
+      { question: 'Can I rent a DJ sound system in Rajkot?', answer: 'Yes. We provide DJ sound systems with speakers, subwoofers, mixer, and related equipment for sangeet, garba nights, parties, and celebrations.' },
     ]
   },
   'laptop-on-rent-in-rajkot': {
     slug: 'laptop-on-rent-in-rajkot',
     city: 'Rajkot',
     service: 'Laptop on Rent',
-    metaTitle: 'Laptop on Rent in Rajkot — Business & Bulk Laptops from ₹700/day | Fineline',
-    metaDescription: 'Rent laptops in Rajkot from ₹700/day. Business laptops, MacBooks & bulk orders for exams. Free delivery. 24+ years experience. Call +91 97145 95111.',
+    metaTitle: 'Laptop on Rent in Rajkot — Business & Bulk Laptops | Fineline',
+    metaDescription: 'Rent laptops in Rajkot for business use, events, exams, and training. Bulk laptop rentals available. 24+ years experience. Call +91 97145 95111.',
     h1: 'Laptop on Rent in Rajkot — Business & Bulk Laptops',
-    intro: `Need laptops on rent in Rajkot? Fineline System & Services offers business laptops, premium laptops, and bulk laptop rentals for corporate training, exam centers, and events across Rajkot. Our laptop rental service in Rajkot starts from just ₹700/day for basic laptops and ₹1,000/day for high-performance business laptops. We also cater to bulk laptop requirements in Rajkot — if you need 10 or more laptops for an exam center, training program, or corporate event, we offer special rates starting at ₹500/unit/day. All laptops come pre-configured and ready to use with free delivery anywhere in Rajkot.`,
+    intro: `Need laptops on rent in Rajkot? Fineline System & Services offers business laptops, premium laptops, and bulk laptop rentals for corporate training, exam centers, and events across Rajkot. We also cater to bulk laptop requirements in Rajkot when you need 10 or more laptops for an exam center, training program, or corporate event. All laptops can be pre-configured and ready to use with delivery anywhere in Rajkot.`,
     deliveryTime: 'Same day (free delivery in Rajkot)',
     distanceFromRajkot: 'Headquarters',
     popularVenues: ['Corporate Offices', 'Training Centers', 'Exam Centers', 'IT Companies', 'Educational Institutions'],
     faq: [
-      { question: 'How much does laptop rental cost in Rajkot?', answer: 'Laptop rental in Rajkot starts from ₹700/day for basic laptops (i3/i5, 8GB RAM). Business laptops (i5/i7, 16GB RAM) cost ₹1,000/day. Premium laptops (MacBook Pro, Dell XPS) cost ₹2,000/day. Bulk rates (10+ units) start at ₹500/unit/day.' },
-      { question: 'Can I rent laptops in bulk for exams in Rajkot?', answer: 'Yes! We specialize in bulk laptop rentals for exam centers in Rajkot. We can provide 50+ laptops pre-configured and ready for online exams at ₹500/unit/day with free delivery and setup.' },
+      { question: 'How do I get a laptop rental quote in Rajkot?', answer: 'Share the laptop quantity, configuration needs, rental dates, software requirements, and delivery location. We will send a clear quote on WhatsApp.' },
+      { question: 'Can I rent laptops in bulk for exams in Rajkot?', answer: 'Yes. We specialize in bulk laptop rentals for exam centers in Rajkot and can provide large quantities pre-configured and ready for online exams.' },
       { question: 'Do the laptops come with internet connectivity?', answer: 'The laptops come with WiFi capability. If your venue has WiFi, they will connect automatically. We can also arrange mobile hotspot solutions for venues without internet.' },
     ]
   },
@@ -132,8 +132,8 @@ const cityPages: Record<string, CityData> = {
     popularVenues: ['Lakhota Lake Area Hotels', 'Summair Club Road', 'Jamnagar University', 'Industrial Area Venues', 'Party Plots'],
     faq: [
       { question: 'How quickly can you deliver AV equipment to Jamnagar?', answer: 'Jamnagar is just ~100 km from our Rajkot headquarters, so we offer same-day delivery for most equipment. For planned events, we typically deliver and set up a day before.' },
-      { question: 'What is the most popular AV rental for Jamnagar weddings?', answer: 'For Jamnagar weddings, our Wedding Reception Package (₹14,080/day) with a 10x6ft LED wall and large PA system is the most requested. LED wall display of wedding photos/videos is a must-have for modern Jamnagar weddings.' },
-      { question: 'Do you provide projectors for corporate events in Jamnagar?', answer: 'Yes! We regularly provide projectors and presentation equipment for corporate events in Jamnagar, especially for companies in the industrial and oil refinery sectors. Our Corporate Conference Package at ₹8,370/day is popular.' },
+      { question: 'What is the most popular AV rental for Jamnagar weddings?', answer: 'For Jamnagar weddings, LED walls with a clear PA system and microphones are the most requested. LED wall display of wedding photos and videos is a must-have for modern Jamnagar weddings.' },
+      { question: 'Do you provide projectors for corporate events in Jamnagar?', answer: 'Yes. We regularly provide projectors and presentation equipment for corporate events in Jamnagar, especially for companies in the industrial and oil refinery sectors.' },
     ]
   },
   'av-equipment-rental-in-morbi': {
@@ -143,14 +143,14 @@ const cityPages: Record<string, CityData> = {
     metaTitle: 'AV Equipment Rental in Morbi — Projectors, LED Screens, Sound Systems | Fineline',
     metaDescription: 'Rent AV equipment in Morbi. Projectors, LED walls, sound systems for ceramic industry events & weddings. Fast delivery from Rajkot. Call +91 97145 95111.',
     h1: 'AV Equipment Rental in Morbi',
-    intro: `Morbi, known as the ceramic capital of India, is just 65 km from our Rajkot headquarters, making it one of our fastest delivery zones. Fineline System & Services provides professional AV equipment rental in Morbi for the booming ceramic industry's corporate events, product showcases, and exhibitions, as well as for weddings and social functions. Morbi's ceramic tile manufacturers and exporters frequently need professional AV setups for dealer meets, product launches, and factory visits — and we provide projectors, LED walls, sound systems, and laptops with same-day delivery and setup. For Morbi's vibrant wedding culture, we offer complete LED wall and sound system packages that bring a touch of grandeur to celebrations.`,
+    intro: `Morbi, known as the ceramic capital of India, is just 65 km from our Rajkot headquarters, making it one of our fastest delivery zones. Fineline System & Services provides professional AV equipment rental in Morbi for the booming ceramic industry's corporate events, product showcases, and exhibitions, as well as for weddings and social functions. Morbi's ceramic tile manufacturers and exporters frequently need professional AV setups for dealer meets, product launches, and factory visits — and we provide projectors, LED walls, sound systems, and laptops with same-day delivery and setup. For Morbi's vibrant wedding culture, we offer complete LED wall and sound system setups that bring a touch of grandeur to celebrations.`,
     deliveryTime: 'Same day delivery (~65 km from Rajkot)',
     distanceFromRajkot: '~65 km (1.5 hours)',
     popularVenues: ['Ceramic Industry Showrooms', 'Hotel Convention Halls', 'Party Plots', 'Factory Meeting Rooms', 'Community Halls'],
     faq: [
       { question: 'How fast can you deliver equipment to Morbi?', answer: 'Morbi is just ~65 km from Rajkot, so we offer same-day delivery within 1.5-2 hours. We frequently serve Morbi events and have a strong presence in the city.' },
-      { question: 'Do you provide AV equipment for ceramic industry events in Morbi?', answer: 'Yes! We regularly provide projectors, LED walls, and sound systems for ceramic industry dealer meets, product launches, and exhibitions in Morbi. Our Exhibition Package at ₹22,525/day is popular among Morbi manufacturers.' },
-      { question: 'What is the cost of LED wall rental in Morbi?', answer: 'LED wall rental in Morbi starts from ₹2,500/day for a 6x4ft display. For larger setups (10x6ft at ₹6,000/day or 12x8ft at ₹9,500/day), we add a nominal delivery charge from Rajkot.' },
+      { question: 'Do you provide AV equipment for ceramic industry events in Morbi?', answer: 'Yes. We regularly provide projectors, LED walls, and sound systems for ceramic industry dealer meets, product launches, and exhibitions in Morbi.' },
+      { question: 'How do I get an LED wall quote in Morbi?', answer: 'Share your venue, date, indoor or outdoor location, and preferred LED wall size on WhatsApp. We will include equipment, delivery from Rajkot, setup, and support in the quote.' },
     ]
   },
   'av-equipment-rental-in-junagadh': {
@@ -166,7 +166,7 @@ const cityPages: Record<string, CityData> = {
     popularVenues: ['University Auditoriums', 'Hotel Banquet Halls', 'Government Venues', 'Party Plots', 'Cultural Centers'],
     faq: [
       { question: 'Do you deliver AV equipment to Junagadh?', answer: 'Yes! Junagadh is approximately 100 km from our Rajkot headquarters. We provide same-day delivery for most equipment and next-day delivery for larger setups.' },
-      { question: 'What AV equipment is popular for Junagadh college events?', answer: 'For college events in Junagadh, our College Seminar Package (₹6,120/day) with projector, screen, PA system, mic, and laptop is the most popular choice.' },
+      { question: 'What AV equipment is popular for Junagadh college events?', answer: 'For college events in Junagadh, projector, screen, PA system, microphone, and laptop setups are the most popular choice.' },
       { question: 'Can you set up AV for outdoor events near Girnar in Junagadh?', answer: 'Yes, we provide outdoor-rated LED walls and weather-resistant sound systems for outdoor events in the Junagadh area, including events near Girnar and at open-air venues.' },
     ]
   },
@@ -177,14 +177,14 @@ const cityPages: Record<string, CityData> = {
     metaTitle: 'AV Equipment Rental in Bhavnagar — Projectors, LED Screens, Sound Systems | Fineline',
     metaDescription: 'Rent AV equipment in Bhavnagar. Projectors, LED walls, sound systems with delivery & setup from Rajkot. Call +91 97145 95111.',
     h1: 'AV Equipment Rental in Bhavnagar',
-    intro: `Bhavnagar, the cultural capital of Saurashtra, is approximately 170 km from our Rajkot headquarters. Fineline System & Services serves Bhavnagar with professional AV equipment rental for corporate events, weddings, college functions, and exhibitions. Bhavnagar's thriving diamond industry and port-related businesses frequently need AV equipment for dealer meets, conferences, and corporate gatherings. We deliver projectors, LED walls, sound systems, and laptops to Bhavnagar with next-day delivery and provide complete setup and on-site technician support. Bhavnagar's grand wedding culture also drives demand for our LED wall and sound system packages.`,
+    intro: `Bhavnagar, the cultural capital of Saurashtra, is approximately 170 km from our Rajkot headquarters. Fineline System & Services serves Bhavnagar with professional AV equipment rental for corporate events, weddings, college functions, and exhibitions. Bhavnagar's thriving diamond industry and port-related businesses frequently need AV equipment for dealer meets, conferences, and corporate gatherings. We deliver projectors, LED walls, sound systems, and laptops to Bhavnagar with next-day delivery and provide complete setup and on-site technician support. Bhavnagar's grand wedding culture also drives demand for our LED wall and sound system setups.`,
     deliveryTime: 'Next day delivery (~170 km from Rajkot)',
     distanceFromRajkot: '~170 km (3-4 hours)',
     popularVenues: ['Diamond Industry Offices', 'Hotel Conference Halls', 'University Campuses', 'Party Plots', 'Cultural Venues'],
     faq: [
       { question: 'How do you deliver AV equipment to Bhavnagar?', answer: 'We deliver from our Rajkot headquarters to Bhavnagar (~170 km). For planned events, we schedule next-day delivery. Our team arrives early, sets up all equipment, and stays for technical support during your event.' },
       { question: 'What is the delivery charge for Bhavnagar?', answer: 'Delivery charges to Bhavnagar vary based on equipment quantity. Contact us on WhatsApp at +91 97145 95111 for an exact quote including delivery to your Bhavnagar venue.' },
-      { question: 'Do you serve the Bhavnagar diamond industry?', answer: 'Yes! We regularly provide AV equipment for diamond industry events, dealer meets, and corporate conferences in Bhavnagar. Our Corporate Conference Package at ₹8,370/day is popular among Bhavnagar businesses.' },
+      { question: 'Do you serve the Bhavnagar diamond industry?', answer: 'Yes. We regularly provide AV equipment for diamond industry events, dealer meets, and corporate conferences in Bhavnagar.' },
     ]
   },
   'av-equipment-rental-in-surat': {
@@ -200,7 +200,7 @@ const cityPages: Record<string, CityData> = {
     popularVenues: ['Vesu Corporate Offices', 'Dumas Road Banquets', 'Adajan Convention Centers', 'SVNIT Campus', 'Exhibition Grounds'],
     faq: [
       { question: 'Do you really deliver AV equipment to Surat from Rajkot?', answer: 'Yes! We serve Surat regularly. For Surat events, we schedule delivery a day in advance. Our team drives the equipment (~450 km), sets up everything, and provides on-site technical support during your event.' },
-      { question: 'Is the pricing different for Surat?', answer: 'Equipment rental prices are the same. There is a delivery charge for Surat based on equipment quantity. Contact us on WhatsApp for an inclusive quote for your Surat event.' },
+      { question: 'How do I get a quote for Surat?', answer: 'Share your Surat venue, event date, equipment needs, and schedule on WhatsApp. We will include equipment, delivery, setup, and technical support in one clear quote.' },
       { question: 'What types of events do you serve in Surat?', answer: 'We serve corporate events (textile/diamond industry), grand Surti weddings, trade exhibitions, college fests, and government seminars in Surat.' },
     ]
   },
@@ -216,9 +216,9 @@ const cityPages: Record<string, CityData> = {
     distanceFromRajkot: '~280 km (5 hours)',
     popularVenues: ['Productivity Road Offices', 'Ajwa Road Banquets', 'MS University Campus', 'Alkapuri Hotels', 'Cultural Centers'],
     faq: [
-      { question: 'Do you provide AV equipment for corporate events in Vadodara?', answer: 'Yes! We regularly serve corporate events in Vadodara, including conferences, training sessions, and product launches. Our Corporate Conference Package at ₹8,370/day is popular among Vadodara businesses.' },
+      { question: 'Do you provide AV equipment for corporate events in Vadodara?', answer: 'Yes. We regularly serve corporate events in Vadodara, including conferences, training sessions, and product launches.' },
       { question: 'What is the delivery timeline for Vadodara?', answer: 'Vadodara is ~280 km from Rajkot. We schedule next-day delivery, arriving early morning to set up equipment before your event begins.' },
-      { question: 'Can you provide AV equipment for MS University events in Vadodara?', answer: 'Yes! We serve educational institutions in Vadodara including MS University. Our College Seminar Package at ₹6,120/day is ideal for seminars, convocations, and college fests.' },
+      { question: 'Can you provide AV equipment for MS University events in Vadodara?', answer: 'Yes. We serve educational institutions in Vadodara including MS University with projector, sound, microphone, display, and laptop setups for seminars, convocations, and college fests.' },
     ]
   },
   'av-equipment-rental-in-gandhidham': {
@@ -235,7 +235,7 @@ const cityPages: Record<string, CityData> = {
     faq: [
       { question: 'Do you deliver AV equipment to Gandhidham?', answer: 'Yes! We serve Gandhidham and the Kutch region. At ~250 km from Rajkot, we schedule next-day delivery and provide complete setup and on-site technical support.' },
       { question: 'Can you serve events in Bhuj or other Kutch locations?', answer: 'Yes, we serve the entire Kutch district including Bhuj, Mandvi, and Mundra. Delivery charges may vary based on exact location. Contact us for a quote.' },
-      { question: 'What AV equipment is popular for Gandhidham industrial events?', answer: 'For Gandhidham industrial and port-related events, projectors with PA systems for safety presentations and training are most popular. Our Corporate Conference Package at ₹8,370/day covers most needs.' },
+      { question: 'What AV equipment is popular for Gandhidham industrial events?', answer: 'For Gandhidham industrial and port-related events, projectors with PA systems for safety presentations and training are most popular.' },
     ]
   },
 };
@@ -384,12 +384,12 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { name: 'Projectors & Screens', price: 'From ₹2,000/day', icon: 'airplay', desc: 'HD & 4K projectors with free screen' },
-              { name: 'LED Walls & Displays', price: 'From ₹100/sqft/day', icon: 'tv', desc: 'Indoor & outdoor LED video walls' },
-              { name: 'Sound Systems', price: 'From ₹1,800/day', icon: 'speaker', desc: 'PA systems with wireless microphones' },
-              { name: 'LED TVs & Standees', price: 'From ₹1,500/day', icon: 'desktop_windows', desc: '43" to 65" with stands' },
-              { name: 'Laptops & Computers', price: 'From ₹700/day', icon: 'laptop_mac', desc: 'Business & bulk laptop rental' },
-              { name: 'Stage Lighting', price: 'From ₹1,500/day', icon: 'wb_twilight', desc: 'Moving heads, par lights, stage kits' },
+              { name: 'Projectors & Screens', icon: 'airplay', desc: 'HD & 4K projectors with screen options' },
+              { name: 'LED Walls & Displays', icon: 'tv', desc: 'Indoor & outdoor LED video walls' },
+              { name: 'Sound Systems', icon: 'speaker', desc: 'PA systems with wireless microphones' },
+              { name: 'LED TVs & Standees', icon: 'desktop_windows', desc: '43" to 65" displays with stands' },
+              { name: 'Laptops & Computers', icon: 'laptop_mac', desc: 'Business & bulk laptop rental' },
+              { name: 'Stage Lighting', icon: 'wb_twilight', desc: 'Moving heads, par lights, stage kits' },
             ].map((item, idx) => (
               <div key={idx} className="bg-white rounded-xl p-6 border border-fss-neutral-200 hover:border-fss-primary hover:shadow-lg transition-all">
                 <div className="flex items-center gap-3 mb-3">
@@ -398,7 +398,7 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
                   </div>
                   <div>
                     <h3 className="font-bold text-fss-neutral-900">{item.name}</h3>
-                    <p className="text-sm text-fss-primary font-semibold">{item.price}</p>
+                    <p className="text-sm text-fss-primary font-semibold">Quote on WhatsApp</p>
                   </div>
                 </div>
                 <p className="text-sm text-fss-neutral-700">{item.desc}</p>
@@ -414,24 +414,22 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
         </div>
       </section>
 
-      {/* Packages */}
+      {/* Services */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-black text-fss-neutral-900 mb-8 text-center">
-            Popular Packages for {cityData.city} Events
+            Common AV Services for {cityData.city} Events
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: 'Corporate Conference', price: '₹8,370', link: '/packages' },
-              { name: 'Wedding Reception', price: '₹14,080', link: '/packages' },
-              { name: 'College Seminar', price: '₹6,120', link: '/packages' },
-              { name: 'Exhibition', price: '₹22,525', link: '/packages' },
-            ].map((pkg, idx) => (
-              <Link key={idx} href={pkg.link} className="bg-fss-neutral-50 rounded-xl p-6 border border-fss-neutral-200 hover:border-fss-primary hover:shadow-lg transition-all text-center">
-                <h3 className="font-bold text-fss-neutral-900 mb-2">{pkg.name}</h3>
-                <p className="text-xs text-fss-neutral-700 mb-1">Starting at</p>
-                <p className="text-2xl font-black text-fss-primary mb-3">{pkg.price}/day</p>
-                <span className="text-sm text-fss-neutral-700">View Details &rarr;</span>
+              { name: 'Corporate Conference', link: '/services' },
+              { name: 'Wedding Reception', link: '/services' },
+              { name: 'College Seminar', link: '/services' },
+              { name: 'Exhibition Setup', link: '/services' },
+            ].map((service, idx) => (
+              <Link key={idx} href={service.link} className="bg-fss-neutral-50 rounded-xl p-6 border border-fss-neutral-200 hover:border-fss-primary hover:shadow-lg transition-all text-center">
+                <h3 className="font-bold text-fss-neutral-900 mb-3">{service.name}</h3>
+                <span className="text-sm text-fss-neutral-700">View services &rarr;</span>
               </Link>
             ))}
           </div>
