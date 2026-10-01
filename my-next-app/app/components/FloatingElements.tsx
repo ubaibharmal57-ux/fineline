@@ -19,13 +19,16 @@ export default function FloatingElements({
     lg: { min: 80, max: 150 }
   };
 
+  const seededValue = (seed: number) => ((seed * 9301 + 49297) % 233280) / 233280;
+
   const elements = Array.from({ length: count }, (_, i) => ({
     id: i,
-    x: Math.random() * 100,
-    y: Math.random() * 100,
-    size: Math.random() * (sizeMap[size].max - sizeMap[size].min) + sizeMap[size].min,
-    duration: 15 + Math.random() * 20,
-    delay: Math.random() * 5,
+    x: seededValue(i + 1) * 100,
+    y: seededValue(i + 17) * 100,
+    size: seededValue(i + 31) * (sizeMap[size].max - sizeMap[size].min) + sizeMap[size].min,
+    duration: 15 + seededValue(i + 47) * 20,
+    delay: seededValue(i + 61) * 5,
+    drift: seededValue(i + 79) * 50 - 25,
   }));
 
   return (
@@ -43,7 +46,7 @@ export default function FloatingElements({
           }}
           animate={{
             y: [0, -100, 0],
-            x: [0, Math.random() * 50 - 25, 0],
+            x: [0, el.drift, 0],
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3],
           }}

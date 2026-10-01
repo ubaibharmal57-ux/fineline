@@ -80,7 +80,7 @@ export default function Header() {
                 <span className="hidden xl:inline">+91 97145 95111</span>
               </a>
               <a
-                href={`https://wa.me/919714595111?text=${whatsappMessage}`}
+                href={`https://wa.me/917096110104?text=${whatsappMessage}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-5 py-2.5 bg-fss-primary hover:bg-fss-primary-dark text-fss-dark-navy text-sm font-bold rounded-lg transition-all hover:-translate-y-0.5"
@@ -136,7 +136,7 @@ export default function Header() {
                 ))}
                 <div className="mt-3 pt-3 border-t border-white/10 flex flex-col gap-2">
                   <a
-                    href={`https://wa.me/919714595111?text=${whatsappMessage}`}
+                    href={`https://wa.me/917096110104?text=${whatsappMessage}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full py-3 bg-green-500 text-white font-bold text-center rounded-lg hover:bg-green-600 transition-colors flex items-center justify-center gap-2"

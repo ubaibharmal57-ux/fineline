@@ -1,21 +1,14 @@
 import type { Metadata } from "next";
-import { Figtree, DM_Sans } from "next/font/google";
+import { Figtree } from "next/font/google";
 import "./globals.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import SiteHeader from "./components/SiteHeader";
+import SiteFooter from "./components/SiteFooter";
 import StructuredData from "./components/StructuredData";
-import WhatsAppButton from "./components/WhatsAppButton";
+import SiteWhatsApp from "./components/SiteWhatsApp";
 
 const figtree = Figtree({
   subsets: ["latin"],
   variable: "--font-figtree",
-  weight: ["400", "500", "600", "700", "800", "900"],
-  display: 'swap',
-});
-
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  variable: "--font-dm-sans",
   weight: ["400", "500", "600", "700", "800", "900"],
   display: 'swap',
 });
@@ -102,20 +95,20 @@ export default function RootLayout({
         <link rel="icon" href="/fss-logo.jpg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" rel="stylesheet" />
         <meta name="geo.region" content="IN-GJ" />
         <meta name="geo.placename" content="Rajkot" />
         <meta name="geo.position" content="22.2952;70.7984" />
         <meta name="ICBM" content="22.2952, 70.7984" />
         <StructuredData />
       </head>
-      <body className={`${figtree.variable} ${dmSans.variable} antialiased`}>
-        <Header />
+      <body className={`${figtree.variable} antialiased`}>
+        <SiteHeader />
         <main className="min-h-screen">
           {children}
         </main>
-        <Footer />
-        <WhatsAppButton />
+        <SiteFooter />
+        <SiteWhatsApp />
       </body>
     </html>
   );

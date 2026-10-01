@@ -114,7 +114,7 @@ export default function ServicesPage() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <a
-                href={`https://wa.me/919714595111?text=${whatsappMessage}`}
+                href={`https://wa.me/917096110104?text=${whatsappMessage}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-green-500 px-7 py-4 font-bold text-white transition-colors hover:bg-green-600"
@@ -266,7 +266,7 @@ export default function ServicesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href={`https://wa.me/919714595111?text=${whatsappMessage}`}
+              href={`https://wa.me/917096110104?text=${whatsappMessage}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-8 py-4 font-bold text-white shadow-lg transition-colors hover:bg-green-700"

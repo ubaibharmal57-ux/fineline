@@ -183,7 +183,7 @@ const cityPages: Record<string, CityData> = {
     popularVenues: ['Diamond Industry Offices', 'Hotel Conference Halls', 'University Campuses', 'Party Plots', 'Cultural Venues'],
     faq: [
       { question: 'How do you deliver AV equipment to Bhavnagar?', answer: 'We deliver from our Rajkot headquarters to Bhavnagar (~170 km). For planned events, we schedule next-day delivery. Our team arrives early, sets up all equipment, and stays for technical support during your event.' },
-      { question: 'What is the delivery charge for Bhavnagar?', answer: 'Delivery charges to Bhavnagar vary based on equipment quantity. Contact us on WhatsApp at +91 97145 95111 for an exact quote including delivery to your Bhavnagar venue.' },
+      { question: 'What is the delivery charge for Bhavnagar?', answer: 'Delivery charges to Bhavnagar vary based on equipment quantity. Contact us on WhatsApp at +91 70961 10104 for an exact quote including delivery to your Bhavnagar venue.' },
       { question: 'Do you serve the Bhavnagar diamond industry?', answer: 'Yes. We regularly provide AV equipment for diamond industry events, dealer meets, and corporate conferences in Bhavnagar.' },
     ]
   },
@@ -331,7 +331,7 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href={`https://wa.me/919714595111?text=${whatsappMessage}`}
+              href={`https://wa.me/917096110104?text=${whatsappMessage}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-bold rounded-xl transition-all shadow-lg"
@@ -471,7 +471,7 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href={`https://wa.me/919714595111?text=${whatsappMessage}`}
+              href={`https://wa.me/917096110104?text=${whatsappMessage}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-green-600 font-bold rounded-lg hover:bg-gray-50 transition-all shadow-lg"

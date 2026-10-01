@@ -26,7 +26,7 @@ export default function ContactPage() {
     const waMessage = encodeURIComponent(
       `Hi Fineline, I need AV equipment.\n\nName: ${formData.name}\nPhone: ${formData.phone}\nEvent Type: ${formData.eventType}\nDate: ${formData.eventDate}\nCity: ${formData.city}\nEquipment: ${equipmentList}\nMessage: ${formData.message}`
     );
-    window.open(`https://wa.me/919714595111?text=${waMessage}`, '_blank');
+    window.open(`https://wa.me/917096110104?text=${waMessage}`, '_blank');
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -325,7 +325,7 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <a
-                  href={`https://wa.me/919714595111?text=${whatsappMessage}`}
+                  href={`https://wa.me/917096110104?text=${whatsappMessage}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full px-6 py-3 bg-green-500 text-white font-bold rounded-lg hover:bg-green-600 transition-colors"

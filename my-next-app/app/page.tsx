@@ -105,7 +105,7 @@ const reviewCards = [
   },
 ];
 
-export default function Home() {
+function LegacyHome() {
   return (
     <>
       <HeroSection />
@@ -326,7 +326,7 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
             <a
-              href={`https://wa.me/919714595111?text=${whatsappMessage}`}
+              href={`https://wa.me/917096110104?text=${whatsappMessage}`}
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center justify-center gap-3 px-12 py-6 bg-green-500 hover:bg-green-600 text-white text-lg font-bold rounded-2xl transition-all shadow-2xl hover:shadow-green-500/50 hover:scale-105"
@@ -364,3 +364,6 @@ export default function Home() {
     </>
   );
 }
+
+void LegacyHome;
+export { default } from './components/HomeExperience';

@@ -211,7 +211,7 @@ export default function ServicesSection() {
                   </div>
 
                   <h3 className="text-4xl font-black mb-6 text-white leading-tight">
-                    Why We're India's
+                    Why We&apos;re India&apos;s
                     <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-fss-primary to-fss-accent">
                       Most Trusted Choice
@@ -219,7 +219,7 @@ export default function ServicesSection() {
                   </h3>
 
                   <p className="text-xl text-white mb-8 leading-relaxed">
-                    With 25 years of excellence serving clients across India, we've perfected the art
+                    With 25 years of excellence serving clients across India, we&apos;ve perfected the art
                     of delivering exceptional audio-visual experiences that exceed expectations.
                   </p>
 

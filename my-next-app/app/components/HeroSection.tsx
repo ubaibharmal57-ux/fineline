@@ -82,7 +82,7 @@ export default function HeroSection() {
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <a
-                href={`https://wa.me/919714595111?text=${whatsappMessage}`}
+                href={`https://wa.me/917096110104?text=${whatsappMessage}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 rounded-xl bg-green-500 px-7 py-4 font-bold text-white shadow-lg shadow-green-500/25 transition-all hover:-translate-y-0.5 hover:bg-green-600"
