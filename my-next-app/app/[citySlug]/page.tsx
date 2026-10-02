@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { additionalCityPages, gujaratLocations } from '../data/gujaratCityPages';
 
 interface CityData {
   slug: string;
@@ -240,13 +241,20 @@ const cityPages: Record<string, CityData> = {
   },
 };
 
+const allCityPages: Record<string, CityData> = {
+  ...cityPages,
+  ...additionalCityPages,
+};
+
+export const dynamicParams = false;
+
 export function generateStaticParams() {
-  return Object.keys(cityPages).map((slug) => ({ citySlug: slug }));
+  return Object.keys(allCityPages).map((slug) => ({ citySlug: slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ citySlug: string }> }): Promise<Metadata> {
   const { citySlug } = await params;
-  const cityData = cityPages[citySlug];
+  const cityData = allCityPages[citySlug];
   if (!cityData) return {};
 
   return {
@@ -260,13 +268,22 @@ export async function generateMetadata({ params }: { params: Promise<{ citySlug:
       description: cityData.metaDescription,
       url: `https://www.finelinesystem.com/${cityData.slug}`,
       type: 'website',
+      locale: 'en_IN',
+      siteName: 'Fineline System & Services',
     },
+    keywords: [
+      `AV equipment rental in ${cityData.city}`,
+      `projector on rent in ${cityData.city}`,
+      `LED wall rental in ${cityData.city}`,
+      `sound system on rent in ${cityData.city}`,
+      `event equipment rental ${cityData.city}`,
+    ],
   };
 }
 
 export default async function CityPage({ params }: { params: Promise<{ citySlug: string }> }) {
   const { citySlug } = await params;
-  const cityData = cityPages[citySlug];
+  const cityData = allCityPages[citySlug];
 
   if (!cityData) {
     notFound();
@@ -276,25 +293,98 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
     `Hi Fineline, I need AV equipment for an event in ${cityData.city}. Can you share details?`
   );
 
-  const faqSchema = {
+  const pageUrl = `https://www.finelinesystem.com/${cityData.slug}`;
+  const currentLocationIndex = gujaratLocations.findIndex((location) => location.city === cityData.city);
+  const relatedCities = [
+    ...gujaratLocations.slice(currentLocationIndex + 1),
+    ...gujaratLocations.slice(0, Math.max(0, currentLocationIndex)),
+  ].slice(0, 6);
+
+  const structuredData = {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": cityData.faq.map((item) => ({
-      "@type": "Question",
-      "name": item.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.answer,
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${pageUrl}#webpage`,
+        "url": pageUrl,
+        "name": cityData.metaTitle,
+        "description": cityData.metaDescription,
+        "inLanguage": "en-IN",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Fineline System & Services",
+          "url": "https://www.finelinesystem.com",
+        },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": ["h1", ".city-intro", ".faq-answer"],
+        },
       },
-    })),
+      {
+        "@type": "Service",
+        "@id": `${pageUrl}#service`,
+        "name": `${cityData.service} in ${cityData.city}`,
+        "description": cityData.metaDescription,
+        "url": pageUrl,
+        "serviceType": "Audio visual equipment rental, delivery, setup and technical support",
+        "areaServed": {
+          "@type": "City",
+          "name": cityData.city,
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Gujarat",
+          },
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Fineline System & Services",
+          "url": "https://www.finelinesystem.com",
+          "telephone": "+919714595111",
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.finelinesystem.com",
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Gujarat Service Areas",
+            "item": "https://www.finelinesystem.com/locations",
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": `${cityData.service} in ${cityData.city}`,
+            "item": pageUrl,
+          },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": cityData.faq.map((item) => ({
+          "@type": "Question",
+          "name": item.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.answer,
+          },
+        })),
+      },
+    ],
   };
 
   return (
     <div className="w-full">
-      {/* FAQ Schema */}
+      {/* Page, service, breadcrumb and FAQ structured data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
       {/* Hero */}
@@ -355,7 +445,7 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
       {/* Intro Content */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-lg text-fss-neutral-700 leading-relaxed mb-8">
+          <p className="city-intro text-lg text-fss-neutral-700 leading-relaxed mb-8">
             {cityData.intro}
           </p>
 
@@ -363,7 +453,7 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
           <div className="bg-fss-neutral-50 rounded-xl p-6 mb-8">
             <h3 className="font-bold text-fss-neutral-900 mb-4 flex items-center gap-2">
               <span className="material-symbols-outlined text-fss-primary">location_on</span>
-              Popular Venues We Serve in {cityData.city}
+              Common Venue Types and Event Areas in {cityData.city}
             </h3>
             <div className="flex flex-wrap gap-3">
               {cityData.popularVenues.map((venue, idx) => (
@@ -436,6 +526,37 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
         </div>
       </section>
 
+      {/* Nearby service areas */}
+      {relatedCities.length > 0 && (
+        <section className="border-y border-fss-neutral-200 bg-white py-12">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-fss-accent-dark">Gujarat coverage</p>
+                <h2 className="mt-3 text-2xl font-bold tracking-tight text-fss-neutral-900">
+                  Explore AV rental in other cities
+                </h2>
+              </div>
+              <Link href="/locations" className="inline-flex items-center gap-2 text-sm font-bold text-fss-neutral-900 hover:text-fss-accent-dark">
+                View all service areas
+                <span className="material-symbols-outlined text-lg">arrow_forward</span>
+              </Link>
+            </div>
+            <div className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+              {relatedCities.map((location) => (
+                <Link
+                  key={location.slug}
+                  href={`/${location.slug}`}
+                  className="rounded-lg border border-fss-neutral-200 bg-fss-neutral-50 px-3 py-3 text-center text-sm font-semibold text-fss-neutral-900 transition-colors hover:border-fss-primary hover:bg-white"
+                >
+                  {location.city}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* FAQ */}
       <section className="py-16 bg-fss-neutral-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -451,7 +572,7 @@ export default async function CityPage({ params }: { params: Promise<{ citySlug:
                     expand_more
                   </span>
                 </summary>
-                <div className="px-6 pb-6 text-fss-neutral-700 leading-relaxed">
+                <div className="faq-answer px-6 pb-6 text-fss-neutral-700 leading-relaxed">
                   {item.answer}
                 </div>
               </details>

@@ -304,6 +304,10 @@ export default function HomeExperience() {
                 </Link>
               ))}
             </div>
+            <Link href="/locations" className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-fss-neutral-900 hover:text-fss-accent-dark">
+              View all Gujarat service areas
+              <span className="material-symbols-outlined text-lg">arrow_forward</span>
+            </Link>
           </div>
           <div>
             <p className="site-kicker">Useful answers</p>

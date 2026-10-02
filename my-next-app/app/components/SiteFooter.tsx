@@ -8,6 +8,7 @@ const whatsappMessage = encodeURIComponent(
 const footerLinks = [
   { name: 'Equipment', href: '/equipment' },
   { name: 'Services', href: '/services' },
+  { name: 'Locations', href: '/locations' },
   { name: 'About Fineline', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ];
